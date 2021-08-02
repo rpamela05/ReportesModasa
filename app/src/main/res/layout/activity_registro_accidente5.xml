@@ -61,63 +61,182 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Tipo de Contacto o casi contacto con energia o sustancia"
-                android:layout_marginBottom="15dp"/>
+                android:text="(CB) Causas Básicas / Subyacentes (CB)"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="ACTOS SUBESTANDAR/INSEGUROS"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:background="#F6F8FC"
+                android:gravity="center"
+                android:textColor="#BEBEBE"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Golpeada Contra (Chocar contra algo)"
+                android:text="Operar equipo sin autorizacion"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Golpeado por (Impactado por objeto en movimiento)"
+                android:text="Omisión de advertir"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Caida a un nivel mas bajo"
+                android:text="Omisión de Asegurar"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Caida en el mismo nivel (Resbalar y caer, tropezar)"
+                android:text="Operar a velocidad indebida"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Atrapado (Puntos de Peñizco y Mordida)"
+                android:text="Desactivar dispositivos de seguridad"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cogido (Enganchado, colgado)"
+                android:text="Usar equipo defectuoso"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Atrapado entre o debajo (Chancado, Amputado)"
+                android:text="No usar el EPP correctamente"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Contacto con (Electricidad, Calor, Frio, Radiación Caústico, Toxico, Ruido)"
+                android:text="Carga Incorrecta"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sobretensión; Sobre-esfuerzo; Sobrecarga"
+                android:text="Colocación incorrecta"
                 android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posición indebida"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dar servicio a equipo en funcionamiento"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jugueteo"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bajo la influencia del alcohol y/u otras drogas"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uso indebido del Equipo"
+                android:textSize="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="CONDICIONES SUBESTANDAR / INSEGURAS"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:background="#F6F8FC"
+                android:gravity="center"
+                android:textColor="#BEBEBE"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardas o Barreras Inadecuadas"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Equipo de protección incorrecto o Inadecuado"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Herramientas, Equipo o Materiales defectuosos"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Congestión o Acción Restringida"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sistema de Advertencia Inadecuado"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Peligros de Incendio y Explosión"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orden y Limpieza deficientes/ Desorden"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exposición al Ruido"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exposición a la Radiación"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperaturas Extremas"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iluminación Deficiente o Excesiva"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ventilación Inadecuada"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Condiciones Ambientales Peligrosas"
+                android:textSize="12dp"/>
+
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSiguiente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -126,7 +245,8 @@
                 android:text="Siguiente"
                 android:backgroundTint="@color/fondo_user"
                 android:textColor="@color/black"
-                />-
+                />
+        </LinearLayout>-
 
         </LinearLayout>
 

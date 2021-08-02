@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroAccidente6"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar4"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Nro. registro"
+            android:textStyle="italic|bold"
+            android:layout_marginRight="10dp"
+            android:textSize="18dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/simpleEditText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="6dp"
+            android:textSize="15dp"
+            android:textColorHint="#fff"
+            android:background="@drawable/rounded_edittext"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:text="CAUSAS QUE ORIGINARON EL ACCIDENTE DE TRABAJO - TABLA SCAT"
+        android:textSize="11dp"
+        android:textStyle="bold"
+        android:background="@color/fondo_user"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="(CB) Causas Básicas / Subyacentes (CB)"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="FACTORES PERSONALES"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:background="#F6F8FC"
+                android:gravity="center"
+                android:textColor="#BEBEBE"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Capacidad Física / Fisiológica Inadecuada"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estatura, Peso, tamaño, fuerza, alcance, etc."
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rango limitado de movimiento corporal"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Capacidad limitada para mantener posiciones del cuerpo"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alergias o sensibilidad a sustancias"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sensibilidad a extremos sensoriales"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Defecto de visión"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Defecto de audición"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Otros defectos sensoriales (tacto, gusto, olfato. equilibrio)"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Otras capacidades físicas permanentes"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Incapacidades temporales"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Capacidad Mental/Psicológica Inadecuada"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Miedos y Fobias"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perturbación Emocional"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enfermedad Mental"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nivel de Inteligencia"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Incapacidad para Comprender"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mal discernimiento"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mala coordinación"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiempo lento de reacción"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baja aptitud mecánica"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Baja aptitud para el aprendizaje"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fallas de memoria"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Tensión Física o Fisiológica"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lesión o Enfermedad"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fatiga debida a carga o duración del trabajo"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fatiga debida a falta de descanso"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fatiga debida a sobrecarga sensorial"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exposición a peligros para la salud"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exposición a temperaturas extremas"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deficiencia de oxígeno"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Variación de la presión atmosférica"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Movimiento restringido"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Insuficiencia de azúcar en la sangre"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Drogas"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Tensión Mental o Psicológica"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sobrecarga emocional"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fatiga debida a la velocidad o carga de trabajo mental"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exigencias extremas de discernimiento / decisión"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rutina, monotonía, exigencia de vigilancia aburrida"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exigencias extremas de concentración / percepción"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Actividades sin “sentido” o “degradantes”"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrucciones/ exigencias confusas"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exigencias /instrucciones contradictorias"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preocupación por problemas"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frustración"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enfermedad Mental"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Falta de Conocimientos"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Falta de experiencia"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Orientación inadecuada"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrenamiento inicial inadecuado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrenamiento de actualización inadecuado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrucciones malentendidas"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Falta de Habilidad"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrucción inicial inadecuada"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Procedimiento inadecuado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desempeño infrecuente"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Falta de Orientación"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrucciones de revisión inadecuada"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Motivación Incorrecta"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="El desempeño incorrecto es premiado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="El desempeño correcto es castigado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Falta de incentivos"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frustración excesiva"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agresión indebida"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intento incorrecto de ahorrar tiempo o esfuerzo"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intento incorrecto de evitar incomodidad"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intento incorrecto de llamar la atención"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disciplina inadecuada"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Presión indebida de los compañeros"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ejemplo indebido de la supervisión"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Retroalimentación inadecuada del desempeño"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refuerzo inadecuado de la conducta correcta"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Incentivos de producción incorrectos"
+                    android:textSize="12dp"/>
+            </LinearLayout>-
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:text="FACTORES LABORALES"
+                    android:layout_marginTop="10dp"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    android:background="#F6F8FC"
+                    android:gravity="center"
+                    android:textColor="#BEBEBE"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Liderazgo y/o Supervisión Inadecuados"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relaciones jerárquicas confusas o contradictorias"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asignación confusa o contradictoria de responsabilidades"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delegación indebida o insuficiente"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dar política, procedimiento, prácticas o pautas inadecuadas"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dar objetivos, metas o estándares contradictorios"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Planificación o programación inadecuada del trabajon"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrucciones, orientación y/o entrenamiento inadecuados"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Proporcionar documentos de referencia, directivas y publicaciones de orientación inadecuadas
+"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identificación y evaluación inadecuadas de exposición a pérdidas"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Falta de conocimiento del trabajo de supervisión/gerencial"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calificaciones individuales incompatibles con los requisitos del trabajo o tarea"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medición y evaluación inadecuada del desempeño"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Retroalimentación inadecuada o incorrecta deldesempeño"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Ingeniería Inadecuada"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Evaluación inadecuada de exposición a pérdidas"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Consideración inadecuada de factoreshumanos/ergonomía"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estándares, especificaciones y /o criterios de diseñoinadecuados"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Control inadecuado de la construcción"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Evaluación inadecuada de la preparación operativa"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Controles Inadecuados o incorrectos"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monitoreo Inadecuado de la operación Inicial"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Evaluación Inadecuada de los cambios"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Compras Inadecuadas"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Especificaciones inadecuadas en las requisiciones"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Investigación inadecuada de materiales o equipos"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Especificaciones inadecuadas a los vendedores"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modo o ruta de embarque inadecuada"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inspección o aceptación de recibos inadecuados"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comunicación inadecuada de datos de salud y seguridad"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manipulación incorrecta de materiales"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Almacenamiento incorrecto de materiales"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transporte incorrecto de materiales"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Identificación inadecuada de artículos peligrosos"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salvamento y /o eliminación de desechos incorrecta"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selección inadecuada de contratistas"
+                    android:textSize="12dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Falta de Conocimientos"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Falta de experiencia"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Orientación inadecuada"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrenamiento inicial inadecuado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrenamiento de actualización inadecuado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrucciones malentendidas"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Falta de Habilidad"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrucción inicial inadecuada"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Procedimiento inadecuado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desempeño infrecuente"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Falta de Orientación"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrucciones de revisión inadecuada"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="Motivación Incorrecta"
+                    android:layout_marginBottom="14dp"
+                    android:textColor="#0056B8"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="El desempeño incorrecto es premiado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="El desempeño correcto es castigado"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Falta de incentivos"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Frustración excesiva"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agresión indebida"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intento incorrecto de ahorrar tiempo o esfuerzo"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intento incorrecto de evitar incomodidad"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Intento incorrecto de llamar la atención"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disciplina inadecuada"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Presión indebida de los compañeros"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ejemplo indebido de la supervisión"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Retroalimentación inadecuada del desempeño"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Refuerzo inadecuado de la conducta correcta"
+                    android:textSize="12dp"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Incentivos de producción incorrectos"
+                    android:textSize="12dp"/>
+            </LinearLayout>-
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSiguiente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_gravity="center"
+                    android:text="Siguiente"
+                    android:backgroundTint="@color/fondo_user"
+                    android:textColor="@color/black"
+                    />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
