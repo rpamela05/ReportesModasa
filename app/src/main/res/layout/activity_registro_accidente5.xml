@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroAccidente5"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar4"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="Nro. registro"
+            android:textStyle="italic|bold"
+            android:layout_marginRight="10dp"
+            android:textSize="18dp"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:id="@+id/simpleEditText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="6dp"
+            android:textSize="15dp"
+            android:textColorHint="#fff"
+            android:background="@drawable/rounded_edittext"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="20dp"
+        android:text="CAUSAS QUE ORIGINARON EL ACCIDENTE DE TRABAJO - TABLA SCAT"
+        android:textSize="11dp"
+        android:textStyle="bold"
+        android:background="@color/fondo_user"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tipo de Contacto o casi contacto con energia o sustancia"
+                android:layout_marginBottom="15dp"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Golpeada Contra (Chocar contra algo)"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Golpeado por (Impactado por objeto en movimiento)"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Caida a un nivel mas bajo"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Caida en el mismo nivel (Resbalar y caer, tropezar)"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Atrapado (Puntos de Peñizco y Mordida)"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cogido (Enganchado, colgado)"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Atrapado entre o debajo (Chancado, Amputado)"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contacto con (Electricidad, Calor, Frio, Radiación Caústico, Toxico, Ruido)"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sobretensión; Sobre-esfuerzo; Sobrecarga"
+                android:textSize="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:layout_gravity="center"
+                android:text="Siguiente"
+                android:backgroundTint="@color/fondo_user"
+                android:textColor="@color/black"
+                />-
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+</LinearLayout>

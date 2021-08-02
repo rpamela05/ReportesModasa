@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "514847669874",
+    "project_id": "modasa-a830b",
+    "storage_bucket": "modasa-a830b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514847669874:android:17b43249e2d3e999078ceb",
+        "android_client_info": {
+          "package_name": "pe.edu.tecsup.reportesmodasa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514847669874-0r5cvdvo39lpea5k0n9sufjigcp88lgn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZX4GeygPq5tsZ_Hafpvg8prqoxXPHTMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514847669874-0r5cvdvo39lpea5k0n9sufjigcp88lgn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
