@@ -88,25 +88,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
+
                 <LinearLayout
-                    android:layout_width="245dp"
+                    android:layout_width="209dp"
                     android:layout_height="150dp"
                     android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Imagen 1"
-                    android:textSize="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Imagen 1"
+                        android:textSize="15dp" />
+
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Seleccionar"
-                    android:layout_marginTop="35dp"
+                        android:layout_marginTop="35dp"
                         android:backgroundTint="@color/fondo_user"
-                        android:textColor="#5A5A5A"
-                        />
+                        android:text="Seleccionar"
+                        android:textColor="#5A5A5A" />
                 </LinearLayout>
+
                 <ImageView
                     android:layout_width="180dp"
                     android:layout_height="150dp"
@@ -119,24 +122,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
+
                 <LinearLayout
-                    android:layout_width="245dp"
+                    android:layout_width="206dp"
                     android:layout_height="150dp"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Imagen 2"
-                        android:textSize="15dp"/>
+                        android:textSize="15dp" />
+
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Seleccionar"
                         android:layout_marginTop="35dp"
                         android:backgroundTint="@color/fondo_user"
-                        android:textColor="#5A5A5A"
-                        />
+                        android:text="Seleccionar"
+                        android:textColor="#5A5A5A" />
                 </LinearLayout>
                 <ImageView
                     android:layout_width="180dp"
@@ -149,24 +154,26 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal">
+
                 <LinearLayout
-                    android:layout_width="245dp"
+                    android:layout_width="204dp"
                     android:layout_height="150dp"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Imagen 3"
-                        android:textSize="15dp"/>
+                        android:textSize="15dp" />
+
                     <com.google.android.material.button.MaterialButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Seleccionar"
                         android:layout_marginTop="35dp"
                         android:backgroundTint="@color/fondo_user"
-                        android:textColor="#5A5A5A"
-                        />
+                        android:text="Seleccionar"
+                        android:textColor="#5A5A5A" />
                 </LinearLayout>
                 <ImageView
                     android:layout_width="180dp"

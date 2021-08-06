@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReportesModasa">
-        <activity android:name=".RegistroAccidente6"></activity>
+        <activity android:name=".RegistroAccidente6"/>
         <activity android:name=".RegistroAccidente5" />
         <activity android:name=".RegistroAccidente4" />
         <activity android:name=".RegistroAccidente3" />
