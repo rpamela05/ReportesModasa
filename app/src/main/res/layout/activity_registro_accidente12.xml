@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bar6"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/fondo_user"
+        android:gravity="center"
+        android:text="DESCARGAR"
+        android:textSize="11dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+
+                android:layout_height="match_parent"
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="Exportar a: " />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="217dp"
+                android:layout_gravity="center"
+                android:src="@drawable/pdf"
+                android:layout_marginTop="30dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSiguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="25dp"
+                android:layout_gravity="center"
+                android:text="Descargar"
+                android:backgroundTint="@color/fondo_user"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
