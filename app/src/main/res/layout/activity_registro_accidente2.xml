@@ -32,7 +32,7 @@
             android:layout_gravity="center"/>
 
         <EditText
-            android:id="@+id/simpleEditText"
+            android:id="@+id/nroRegistro"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -72,31 +72,27 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fecha y hora (accidente)"
+                    android:text="Fecha y hora (Accidente)"
                     android:textSize="15dp"
                     android:layout_marginRight="22dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:text="Fecha y hora (Investigación)"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
                     android:src="@drawable/ic_baseline_calendar_today_24"
-                    android:layout_gravity="center|bottom"/>
+                    android:layout_marginRight="5dp"/>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="60dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginRight="70dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/txtA_Fecha"
@@ -111,10 +107,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_access_time_24"
-                    android:layout_gravity="center|bottom"/>
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginRight="5dp"/>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="60dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="13dp">
 
@@ -127,16 +124,41 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha y hora (Investigación)"
+                    android:textSize="15dp"
+                    android:layout_marginRight="22dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
                     android:src="@drawable/ic_baseline_calendar_today_24"
-                    android:layout_gravity="center|bottom"/>
+                    android:layout_marginRight="5dp"/>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="60dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginRight="70dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/txtI_Fecha"
@@ -151,12 +173,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_baseline_access_time_24"
-                    android:layout_gravity="center|bottom"/>
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginRight="5dp"/>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="60dp"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginRight="13dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/txtI_Hora"
@@ -166,6 +189,8 @@
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
+
+
 
 
             </LinearLayout>
@@ -178,6 +203,7 @@
                 android:hint="Lugar exacto del accidente">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtLugar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
@@ -192,18 +218,32 @@
                 android:textSize="16dp"
                 android:layout_marginTop="20dp"/>
 
-            <CheckBox
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Accidente leve"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Accidente incapacitante"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Accidente mortal"/>
+                android:orientation="vertical"
+                android:layout_marginStart="5dp">
+
+                <RadioButton
+                    android:id="@+id/a1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accidente leve"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accidente incapacitante"
+                    android:textSize="16sp"/>
+                <RadioButton
+                    android:id="@+id/a3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accidente Mortal"
+                    android:textSize="16sp"/>
+            </RadioGroup>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -212,22 +252,38 @@
                 android:textSize="16dp"
                 android:layout_marginTop="20dp"/>
 
-            <CheckBox
+            <RadioGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total temporal"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Parcial temporal"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Parcial permanente"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total permanente"/>
+                android:orientation="vertical"
+                android:layout_marginStart="5dp">
+
+                <RadioButton
+                    android:id="@+id/i1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total temporal"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/i2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parcial temporal"
+                    android:textSize="16sp"/>
+                <RadioButton
+                    android:id="@+id/i3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parcial permanente"
+                    android:textSize="16sp"/>
+                <RadioButton
+                    android:id="@+id/i4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total permanente"
+                    android:textSize="16sp"/>
+            </RadioGroup>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -235,13 +291,14 @@
                 android:layout_marginTop="15dp"
                 android:layout_height="wrap_content">
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtSexo"
+
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="23dp"
                     android:hint="Dias de descanso medico">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDiasDescanso"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/white"
@@ -250,12 +307,13 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/txtTurno"
+
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
                     android:hint="Nro. trabajadores afectados">
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtTrabajadoresAf"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/white"
@@ -266,13 +324,13 @@
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtPuesto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:hint="Descripción parte del cuerpo lesionado">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"

@@ -32,7 +32,7 @@
             android:textStyle="italic|bold" />
 
         <EditText
-            android:id="@+id/simpleEditText"
+            android:id="@+id/nroRegistro"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -74,7 +74,8 @@
                 android:layout_marginBottom="10dp"/>
 
             <EditText
-                android:layout_width="400dp"
+                android:id="@+id/edtDescripcion"
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
@@ -101,6 +102,7 @@
                         android:textSize="15dp" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSeleccionar1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -111,9 +113,9 @@
                 </LinearLayout>
 
                 <ImageView
+                    android:id="@+id/img1"
                     android:layout_width="180dp"
                     android:layout_height="150dp"
-
                     android:src="@drawable/nodisponible"/>
             </LinearLayout>
 
@@ -135,6 +137,7 @@
                         android:textSize="15dp" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSeleccionar2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -144,9 +147,9 @@
                         android:textColor="#5A5A5A" />
                 </LinearLayout>
                 <ImageView
+                    android:id="@+id/img2"
                     android:layout_width="180dp"
                     android:layout_height="150dp"
-
                     android:src="@drawable/nodisponible"/>
             </LinearLayout>
             <LinearLayout
@@ -167,6 +170,7 @@
                         android:textSize="15dp" />
 
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSeleccionar3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -176,9 +180,9 @@
                         android:textColor="#5A5A5A" />
                 </LinearLayout>
                 <ImageView
+                    android:id="@+id/img3"
                     android:layout_width="180dp"
                     android:layout_height="150dp"
-
                     android:src="@drawable/nodisponible"/>
             </LinearLayout>
 
