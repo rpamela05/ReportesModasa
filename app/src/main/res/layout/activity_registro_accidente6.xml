@@ -85,78 +85,98 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.1 Política General"
+                android:id="@+id/LA1"
 
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.2 Coordinador del Programa"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/LA2"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.3 Participación de Gerencia Superior y Media"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/LA3"/>
+/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.4 Estándares de Desempeño Gerencial"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/LA4"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.5 Participación de Gerencia"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/LA5"/>
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.6 Presentación en Reuniones de Gerencia"
+                android:id="@+id/LA6"
+                android:textSize="12dp" />
 
-                android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.7 Manual de Referencia de Gerencia"
+                android:id="@+id/LA7"
                 android:textSize="12dp"/>
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.8 Realización de Auditorias de Gerencia"
-                android:textSize="12dp"/>
+                android:id="@+id/LA8"
+                android:textSize="12dp" />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.9 Responsabilidad individual de Seguridad y Salud / Control de
 Pérdidas en Descripciones de Puestos"
+                android:id="@+id/LA9"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.10 Establecimiento de Objetivos Anuales de Seguridad y
 Salud/Control de Pérdidas"
+                android:id="@+id/LA10"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.11 Comités Conjuntos de Seguridad y Salud y/o Delegados de
 Seguridad y Salud"
+                android:id="@+id/LA11"
                 android:textSize="12dp"/>
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.12 Negativa a trabajar debido al Procedimiento de Peligros de
 Seguridad y Salud"
-                android:textSize="12dp"/>
+                android:id="@+id/LA12"
+                android:textSize="12dp" />
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1.13 Biblioteca de Referencia"
+                android:id="@+id/LA13"
                 android:textSize="12dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2. ENTRENAMIENTO DE GERENCIA"
                 android:textSize="15dp"
+
                 android:textColor="#0056B8"
 
                 />
@@ -164,36 +184,41 @@ Seguridad y Salud"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2.1 Programa de Orientación/ Inducción de Gerencia"
+                android:id="@+id/EG1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2.2 Entrenamiento Formal Inicial del Personal de Gerencia
 Superior"
+                android:id="@+id/EG2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2.3 Revisión Formal y Entrenamiento Actualizado del Personal
 de Gerencia Superior"
+                android:id="@+id/EG3"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2.4 Entrenamiento Inicial Formal para Personal de Gerencia
 Media y Supervisores"
+                android:id="@+id/EG4"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2.5 Revisión Formal y Entrenamiento Actualizado del Personal
 de Gerencia Media y Supervisores"
+                android:id="@+id/EG5"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2.6 Entrenamiento Formal del Coordinador del Programa
-"
+" android:id="@+id/EG6"
                 android:textSize="12dp"/>
 
             <TextView
@@ -208,25 +233,30 @@ de Gerencia Media y Supervisores"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3.1 Inspecciones Generales Planificadas"
+                android:id="@+id/IP1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3.2 Procedimientos de Seguimiento"
+                android:id="@+id/IP2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3.3 Análisis de Informe de Inspecciónr"
+                android:id="@+id/IP3"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3.4 Programa de Inspección de Piezas/Rubros Críticos"
+                android:id="@+id/IP4"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/IP5"
                 android:text="3.5 Programa de Mantenimiento Preventivo"
                 android:textSize="12dp"/>
             <CheckBox
@@ -234,20 +264,24 @@ de Gerencia Media y Supervisores"
                 android:layout_height="wrap_content"
                 android:text="3.6 Inspección Previa al uso de Equipo Móvil y de Manipulación
 de Materiales"
+                android:id="@+id/IP6"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/IP7"
                 android:text="3.7 Sistema de Informe de Condiciones Alternas"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/IP8"
                 android:text="3.8 Mantenimiento del Informe de Inspección General Planificada"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/IP9"
                 android:text="3.9 Monitoreo Regular del Programa"
                 android:textSize="12dp"/>
 
@@ -262,39 +296,42 @@ de Materiales"
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:text="4.1 Directiva de Gerencia sobre la Importancia"
+                android:id="@+id/AP1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4.2 Inventario de Tareas Críticas"
+                android:id="@+id/AP2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4.3 Objetivos de Análisis de Tareas y Procedimientos de Tareas"
+                android:id="@+id/AP3"
                 android:textSize="12dp"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3.4 Programa de Inspección de Piezas/Rubros Críticos"
-                android:textSize="12dp"/>
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4.4 Análisis y Procedimientos de Tareas Efectuados para
 Tareas Críticas y Actualizados Periódicamente"
+                android:id="@+id/AP4"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4.5 Peligros de Seguridad y Salud en los Análisis y
 Procedimientos de Tareas Críticas"
+                android:id="@+id/AP5"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="4.6 Monitoreo Regular del Programa"
+                android:id="@+id/AP6"
                 android:textSize="12dp"/>
             /*5*/
             <TextView
@@ -307,48 +344,57 @@ Procedimientos de Tareas Críticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5.1 Procedimiento de investigación de Accidente/Incidente"
+                android:id="@+id/IA1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5.2 Alcance e Investigaciones establecidos"
+                android:id="@+id/IA2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5.3 Seguimiento y Medidas de Corrección"
+                android:id="@+id/IA3"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5.4 Utilización de Anuncio de Accidente Mayor"
+                android:id="@+id/IA4"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5.5 Uso de Información de Alto Potencial de Incidente"
+                android:id="@+id/IA5"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5.6 Participación de la Gerencia de Operaciones"
+                android:id="@+id/IA6"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5.7 Informe e Investigación de Incidentes"
+                android:id="@+id/IA7"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5.8 Mantenimiento de Informes de Accidente/Incidente"
+                android:id="@+id/IA8"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5.9 Monitoreo Periódico del Programa"
+                android:id="@+id/IA9"
                 android:textSize="12dp"/>
 
             /*6*/
@@ -361,11 +407,14 @@ Procedimientos de Tareas Críticas"
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/OT1"
                 android:text="6.1 Directiva de Gerencia sobre su importancia"
+
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/OT2"
                 android:text="6.2 Programa Completo de Observación de Tareas"
                 android:textSize="12dp"/>
             <CheckBox
@@ -373,27 +422,27 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="6.3 Nivel de Observación Completa de Tareas"
                 android:textSize="12dp"
+                android:id="@+id/OT3"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6.4 Programa de Observación de Tareas Parciales"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/OT4"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6.5 Análisis de Informe de Observación de Tareas"
-                android:textSize="12dp"/>
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5.6 Participación de la Gerencia de Operaciones"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/OT5"/>
+
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="6.6 Monitoreo Periódico del Programa"
                 android:textSize="12dp"
+                android:id="@+id/OT6"
                 />
 
             /*7*/
@@ -402,80 +451,96 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="7. PREPARACIÓN PARA EMERGENCIAS"
                 android:textSize="15dp"
+
                 android:textColor="#0056B8"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.1 Coordinador Designado"
+                android:id="@+id/PE1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.2 Plan de Emergencia por Escrito"
+                android:id="@+id/PE2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.3 Entrenamiento de Primeros Auxilios para Supervisor"
+                android:id="@+id/PE3"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.4 Entrenamiento de Primeros Auxilios para el Personal (10%)"
+                android:id="@+id/PE4"
+
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.5 Iluminación y Energía de Emergencia Adecuadas"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/PE5"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.6 Controles Principales con Código de Color y Rotulados"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/PE6"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.7 Equipo de Protección y de Rescate"
+                android:id="@+id/PE7"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.8 Entrenamiento y Ejercicios del Equipo de Emergencia"
+                android:id="@+id/PE8"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.9 Asistentes de Primeros Auxilios Calificados"
+                android:id="@+id/PE9"
                 android:textSize="12dp"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.10 Ayuda Exterior y Auxilio Mutuo Organizados"
+                android:id="@+id/PE10"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.11 Protección de Registros Vitales"
+                android:id="@+id/PE11"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.12 Planificación para Etapa Posterior al Evento"
+                android:id="@+id/PE12"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.13 Se provee Comunicación de Emergencia"
+                android:id="@+id/PE13"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="7.14 Comunicaciones de Seguridad Pública Planificadas"
+                android:id="@+id/PE14"
                 android:textSize="12dp"/>
 
              /*8*/
@@ -489,37 +554,44 @@ Procedimientos de Tareas Críticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8.1 Reglamento General de Seguridad y Salud"
+                android:id="@+id/RC1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8.2 Reglamento de Trabajo Especializado"
+                android:id="@+id/RC2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8.3 Sistemas de Permiso de Trabajo y Procedimientos Especiales"
+                android:id="@+id/RC3"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8.4 Programa de Educación y Revisión del Reglamento"
+                android:id="@+id/RC4"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8.5 Esfuerzo de Cumplimiento del Reglamento"
+                android:id="@+id/RC5"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8.6 Uso de Símbolos Educativos y Código de Colores"
+                android:id="@+id/RC6"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="8.7 Monitoreo Periódico del Programa"
+                android:id="@+id/RC7"
                 android:textSize="12dp"
                 />
             /*9*/
@@ -527,33 +599,39 @@ Procedimientos de Tareas Críticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9. ANÁLISIS DE ACCIDENTE / INCIDENTE"
+
                 android:textSize="15dp"
                 android:textColor="#0056B8"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9.1 Cálculo y Uso de Estadísticas de Desempeño"
+                android:id="@+id/AA1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9.2 Análisis de Lesiones y Enfermedades Ocupacionales"
+                android:id="@+id/AA2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9.3 Identificación y Análisis de Daños a la Propiedad y Equipo"
+                android:id="@+id/AA3"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9.4 Equipos de Proyecto para Solución de Problemas"
+                android:id="@+id/AA4"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9.5 Análisis de Incidentes (Cuasi accidentes )"
+                android:id="@+id/AA5"
                 android:textSize="12dp"/>
 
             /*10*/
@@ -567,16 +645,19 @@ Procedimientos de Tareas Críticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10.1 Análisis de Necesidades de Entrenamiento"
+                android:id="@+id/EP1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10.2 Programa de Entrenamiento del Personal"
+                android:id="@+id/EP2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10.3 Evaluación del Programa de Entrenamiento"
+                android:id="@+id/EP3"
                 android:textSize="12dp"
                 />
 
@@ -586,27 +667,32 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="11. EQUIPO DE PROTECCIÓN PERSONAL"
                 android:textSize="15dp"
+
                 android:textColor="#0056B8"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="11.1 Estándares para Equipo de Protección Personal"
+                android:id="@+id/EPP1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="11.2 Registros de Equipo de Protección Personal"
+                android:id="@+id/EPP2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="11.3 Cumplimiento de Estándares"
+                android:id="@+id/EPP3"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="11.4 Monitoreo Periódico del Programa"
+                android:id="@+id/EPP4"
                 android:textSize="12dp"
                 />
             /*12*/
@@ -615,49 +701,58 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="12. CONTROL DE LA SALUD"
                 android:textSize="15dp"
+
                 android:textColor="#0056B8"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12.1 Identificación de Peligros para la Salud"
+                android:id="@+id/CS1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12.2 Control de Peligros de la Salud"
+                android:id="@+id/CS2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12.3 Información / Entrenamiento / Educación"
+                android:id="@+id/CS3"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12.4 Monitoreo de Higiene Industrial"
+                android:id="@+id/CS4"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12.5 Programa de Mantenimiento de la Salud"
+                android:id="@+id/CS5"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12.6 Asistencia Médica Profesional"
+                android:id="@+id/CS6"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12.7 Comunicaciones de Salud a los Trabajadores"
+                android:id="@+id/CS7"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="12.8 Mantenimiento de Registros"
+                android:id="@+id/CS8"
                 android:textSize="12dp"
                 />
             /*13*/
@@ -666,33 +761,39 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="13. SISTEMA DE EVALUACIÓN DEL PROGRAMA"
                 android:textSize="15dp"
+
                 android:textColor="#0056B8"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13.1 Auditoria Completa del Cumplimiento de Estándares del Programa"
+                android:id="@+id/SE1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13.2 Auditoria Completa del Cumplimiento de Estándares de Condiciones Físicas"
+                android:id="@+id/SE2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13.3 Auditoria Completa del Cumplimiento de Estándares de Prevención y Control de incendios"
+                android:id="@+id/SE3"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13.4 Auditoria Completa del Cumplimiento de Estándares de Salud Ocupacional"
+                android:id="@+id/SE4"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="13.5 Registro de Sistemas de Evaluación de Programa"
+                android:id="@+id/SE5"
                 android:textSize="12dp"/>
 
             /*14*/
@@ -701,21 +802,25 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="14. CONTROLES DE INGENIERÍA"
                 android:textSize="15dp"
+
                 android:textColor="#0056B8"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="14.1 Consideraciones de Seguridad y Salud de ingeniería de Diseño en la Concepción y el Diseño"
+                android:id="@+id/CI1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="14.2 Consideraciones de Seguridad y Salud de Ingeniería de Proceso en la Concepción y el Diseño"
+                android:id="@+id/CI2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="14.3 Monitoreo Periódico del Programa"
+                android:id="@+id/CI3"
                 android:textSize="12dp"
                 />
             /*15*/
@@ -724,21 +829,25 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="15. COMUNICACIONES AL PERSONAL"
                 android:textSize="15dp"
+
                 android:textColor="#0056B8"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="15.1 Entrenamiento en Técnicas de Comunicación al Personal"
+                android:id="@+id/CP1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="15.2 Orientación / Inducción de Trabajo para Personal Nuevo/Transferido"
+                android:id="@+id/CP2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="15.3 Entrenamiento y Uso Adecuado de Instrucción de Tarea"
+                android:id="@+id/CP3"
                 android:textSize="12dp"
                 />
             /*16*/
@@ -747,27 +856,32 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="16. REUNIONES GRUPALES"
                 android:textSize="15dp"
+
                 android:textColor="#0056B8"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="16.1 Realización de Reuniones Grupales"
+                android:id="@+id/RG1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="16.2 Registro del Asunto, Ayudas Visuales, Asistencia y Problemas Tratados"
+                android:id="@+id/RG2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="16.3 Participación de la Gerencia Superior y Media"
+                android:id="@+id/RG3"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="16.4 Monitoreo Periódico del Programa"
+                android:id="@+id/RG4"
                 android:textSize="12dp"
                 />
             /*17*/
@@ -781,22 +895,26 @@ Procedimientos de Tareas Críticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="17.1 Programa de Periódico Mural de Seguridad"
+                android:id="@+id/PG1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="17.2 Uso de Estadísticas y Hechos del Programa"
+                android:id="@+id/PG2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="17.3 Promoción de Temas Críticos"
+                android:id="@+id/PG3"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="17.4 Uso de Premios o Reconocimiento"
+                android:id="@+id/PG4"
                 android:textSize="12dp"
                 />
 
@@ -804,22 +922,26 @@ Procedimientos de Tareas Críticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="17.5 Publicaciones de Información el Programa"
+                android:id="@+id/PG5"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="17.6 Promoción del Desempeño en Grupo"
+                android:id="@+id/PG6"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="17.7 Promoción del Orden y la Limpieza"
+                android:id="@+id/PG7"
                 android:textSize="12dp"
                 />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="17.8 Registros de Actividades de Promoción del Programa"
+                android:id="@+id/PG8"
                 android:textSize="12dp"
                 />
 
@@ -829,21 +951,26 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="18. CONTRATACIÓN Y COLOCACIÓN DE PERSONAL"
                 android:textSize="15dp"
+
                 android:textColor="#0056B8"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18.1 Análisis de la Capacidad Física"
+                android:id="@+id/CCP1"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18.2 Examen Médico Pre-Ocupacional"
+                android:id="@+id/CCP2"
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="18.3 Programa de Orientación / Inducción General"
+                android:id="@+id/CCP3"
+
                 android:textSize="12dp"
                 />
             <CheckBox
@@ -851,6 +978,8 @@ Procedimientos de Tareas Críticas"
                 android:layout_height="wrap_content"
                 android:text="18.4 Verificación de Calificaciones Previa a la Contratación y Colocación"
                 android:textSize="12dp"
+                android:id="@+id/CCP4"
+
                 />
 
             /*19*/
@@ -864,12 +993,16 @@ Procedimientos de Tareas Críticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="19.1 Compras Incluyen la Seguridad y Salud en las Especificaciones y Logística"
+                android:id="@+id/CC1"
+
                 android:textSize="12dp"/>
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="19.2 Selección y Control de Contratistas"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/CC2"
+                />
             /*20*/
             <TextView
                 android:layout_width="wrap_content"
@@ -881,12 +1014,15 @@ Procedimientos de Tareas Críticas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20.1 Establecimiento de Sistema de Informes y Análisis de Estadísticas"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/SF1"
+                />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="20.2 Comunicación de información de Seguridad Fuera del Trabajo"
-                android:textSize="12dp"/>
+                android:textSize="12dp"
+                android:id="@+id/SF2"/>
 
 
             <com.google.android.material.button.MaterialButton
