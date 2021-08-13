@@ -32,7 +32,7 @@
             android:layout_gravity="center"/>
 
         <EditText
-            android:id="@+id/simpleEditText"
+            android:id="@+id/nroRegistro"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -88,71 +88,87 @@
             android:layout_marginLeft="20dp">
 
             <CheckBox
+                android:id="@+id/AS1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Operar equipo sin autorizacion"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Omisión de advertir"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Omisión de Asegurar"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Operar a velocidad indebida"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Desactivar dispositivos de seguridad"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Usar equipo defectuoso"
                 android:textSize="12dp"/>
+
             <CheckBox
+                android:id="@+id/AS7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No usar el EPP correctamente"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
+
             <CheckBox
+                android:id="@+id/AS8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Carga Incorrecta"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Colocación incorrecta"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Posición indebida"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Dar servicio a equipo en funcionamiento"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jugueteo"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bajo la influencia del alcohol y/u otras drogas"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/AS14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Uso indebido del Equipo"
@@ -169,66 +185,79 @@
                 android:textColor="#BEBEBE"/>
 
             <CheckBox
+                android:id="@+id/CS1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Guardas o Barreras Inadecuadas"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Equipo de protección incorrecto o Inadecuado"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Herramientas, Equipo o Materiales defectuosos"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Congestión o Acción Restringida"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sistema de Advertencia Inadecuado"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Peligros de Incendio y Explosión"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Orden y Limpieza deficientes/ Desorden"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Exposición al Ruido"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Exposición a la Radiación"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Temperaturas Extremas"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Iluminación Deficiente o Excesiva"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ventilación Inadecuada"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/CS13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Condiciones Ambientales Peligrosas"

@@ -14,7 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReportesModasa">
-        <activity android:name=".RegistroAccidente06"></activity>
+        <activity android:name=".RegistroAccidente06">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".DeclaracionAccidente5" />
         <activity android:name=".DeclaracionAccidente4" />
         <activity android:name=".DeclaracionAccidente3" />
@@ -28,18 +34,15 @@
         <activity android:name=".RegistroAccidente7" />
         <activity android:name=".RegistroAccidente6" />
         <activity android:name=".RegistroAccidente5" />
-        <activity android:name=".RegistroAccidente4" />
+        <activity android:name=".RegistroAccidente4"> </activity>
         <activity android:name=".RegistroAccidente3" />
         <activity android:name=".RegistroAccidente2" />
         <activity android:name=".RegistroAccidente" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".AdminHomeActivity" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
     </application>
 

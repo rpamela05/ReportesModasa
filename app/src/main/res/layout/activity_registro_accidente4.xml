@@ -32,7 +32,7 @@
             android:layout_gravity="center"/>
 
         <EditText
-            android:id="@+id/simpleEditText"
+            android:id="@+id/nroRegistro"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -72,46 +72,55 @@
                 android:layout_marginBottom="15dp"/>
 
             <CheckBox
+                android:id="@+id/C1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Golpeada Contra (Chocar contra algo)"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/C2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Golpeado por (Impactado por objeto en movimiento)"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/C3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Caida a un nivel mas bajo"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/C4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Caida en el mismo nivel (Resbalar y caer, tropezar)"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/C5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Atrapado (Puntos de Peñizco y Mordida)"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/C6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cogido (Enganchado, colgado)"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/C7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Atrapado entre o debajo (Chancado, Amputado)"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/C8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contacto con (Electricidad, Calor, Frio, Radiación Caústico, Toxico, Ruido)"
                 android:textSize="12dp"/>
             <CheckBox
+                android:id="@+id/C9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sobretensión; Sobre-esfuerzo; Sobrecarga"
