@@ -12,6 +12,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class RegistroAccidente06 extends AppCompatActivity {
     CheckBox CF1, CF2, CF3, CF4, CF5, CF6, CF7, CF8, CF9, CF10;
     CheckBox CM1, CM2, CM3, CM4, CM5, CM6, CM7, CM8, CM9, CM10, CM11;
@@ -211,6 +213,7 @@ public class RegistroAccidente06 extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 if (CF1.isChecked() == true) {
                     editor.putString("CF1", CF1.getText().toString());
@@ -1349,7 +1352,7 @@ public class RegistroAccidente06 extends AppCompatActivity {
                         CIC2.isChecked() == true ||
                         CIN1.isChecked() == true ||
                         CIN2.isChecked() == true) {
-                    startActivity(new Intent(getApplicationContext(), RegistroAccidente7.class));
+                    startActivity(new Intent(getApplicationContext(), RegistroAccidente6.class));
                     finish();
                 } else {
                     Toast.makeText(RegistroAccidente06.this, "Seleccione al menos una opción", Toast.LENGTH_SHORT).show();
