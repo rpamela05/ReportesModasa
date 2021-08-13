@@ -7,13 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class RegistroAccidente6 extends  AppCompatActivity {
-
+public class RegistroAccidente7 extends AppCompatActivity {
     Button btnSiguiente;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_accidente6);
+        setContentView(R.layout.activity_registro_accidente7);
         getSupportActionBar().hide();
 
         btnSiguiente=findViewById(R.id.btnSiguiente);
@@ -21,7 +20,7 @@ public class RegistroAccidente6 extends  AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),RegistroAccidente7.class));
+                startActivity(new Intent(getApplicationContext(),RegistroAccidente8.class));
                 finish();
             }
         });
