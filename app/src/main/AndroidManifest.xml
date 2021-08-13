@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReportesModasa">
-        <activity android:name=".DeclaracionAccidente"></activity>
+        <activity android:name=".DeclaracionAccidente5"></activity>
+        <activity android:name=".DeclaracionAccidente4" />
+        <activity android:name=".DeclaracionAccidente3" />
+        <activity android:name=".DeclaracionAccidente2" />
+        <activity android:name=".DeclaracionAccidente" />
         <activity android:name=".RegistroAccidente12" />
         <activity android:name=".RegistroAccidente11" />
         <activity android:name=".RegistroAccidente10" />
