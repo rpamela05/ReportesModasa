@@ -21,7 +21,7 @@ public class RegistroAccidente6 extends  AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),RegistroAccidente7.class));
+                startActivity(new Intent(getApplicationContext(),RegistroAccidente06.class));
                 finish();
             }
         });
