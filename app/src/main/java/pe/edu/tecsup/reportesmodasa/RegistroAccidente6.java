@@ -2,11 +2,14 @@ package pe.edu.tecsup.reportesmodasa;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 
 public class RegistroAccidente6 extends  AppCompatActivity {
     CheckBox LA1,LA2,LA3,LA4,LA5,LA6,LA7,LA8,LA9,LA10,LA11,LA12,LA13;
@@ -29,6 +32,7 @@ public class RegistroAccidente6 extends  AppCompatActivity {
     CheckBox CCP1,CCP2,CCP3,CCP4;
     CheckBox CC1,CC2;
     CheckBox SF1,SF2;
+    EditText nroRegistro;
     Button btnSiguiente;
 
     @Override
@@ -37,6 +41,12 @@ public class RegistroAccidente6 extends  AppCompatActivity {
         setContentView(R.layout.activity_registro_accidente6);
         getSupportActionBar().hide();
 
+        SharedPreferences pref = getSharedPreferences("Accidente", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        nroRegistro = findViewById(R.id.nroRegistro);
+        String codigo = pref.getString("codigo", "");
+
+        nroRegistro.setText(codigo);
 
         btnSiguiente=findViewById(R.id.btnSiguiente);
 
