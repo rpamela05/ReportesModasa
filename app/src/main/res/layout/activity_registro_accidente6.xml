@@ -890,6 +890,7 @@ Procedimientos de Tareas Críticas"
 
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSiguiente"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -898,7 +899,7 @@ Procedimientos de Tareas Críticas"
                 android:text="Siguiente"
                 android:backgroundTint="@color/fondo_user"
                 android:textColor="@color/black"
-                />-
+                />
 
         </LinearLayout>
 
