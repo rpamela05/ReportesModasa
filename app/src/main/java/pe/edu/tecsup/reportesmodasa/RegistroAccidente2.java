@@ -106,6 +106,29 @@ public class RegistroAccidente2 extends AppCompatActivity {
                     Toast.makeText(RegistroAccidente2.this, "Rellene los datos", Toast.LENGTH_SHORT).show();
                 }else{
                     if((a1.isChecked()==true || a2.isChecked()==true || a3.isChecked()==true) && (i1.isChecked()==true || i2.isChecked()==true || i3.isChecked()==true || i4.isChecked()==true)) {
+                        if(a1.isChecked()==true){
+                            editor.putString("gravedadAccidente",a1.getText().toString());
+                            editor.commit();
+                        }if(a2.isChecked()==true){
+                            editor.putString("gravedadAccidente",a2.getText().toString());
+                            editor.commit();
+                        }if(a3.isChecked()==true){
+                            editor.putString("gravedadAccidente",a3.getText().toString());
+                            editor.commit();
+                        }if(i1.isChecked()==true){
+                            editor.putString("gradoIncidente",i1.getText().toString());
+                            editor.commit();
+                        }if(i2.isChecked()==true){
+                            editor.putString("gradoIncidente",i2.getText().toString());
+                            editor.commit();
+                        }if(i3.isChecked()==true){
+                            editor.putString("gradoIncidente",i3.getText().toString());
+                            editor.commit();
+                        }if(i4.isChecked()==true){
+                            editor.putString("gradoIncidente",i4.getText().toString());
+                            editor.commit();
+                        }
+
                         editor.commit();
                         startActivity(new Intent(getApplicationContext(), RegistroAccidente3.class));
                         finish();

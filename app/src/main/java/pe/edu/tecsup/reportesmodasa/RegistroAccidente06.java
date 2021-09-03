@@ -217,42 +217,52 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (CF1.isChecked() == true) {
                     editor.putString("CF1", CF1.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CF2.isChecked() == true) {
                     editor.putString("CF2", CF2.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CF3.isChecked() == true) {
                     editor.putString("CF3", CF3.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CF4.isChecked() == true) {
                     editor.putString("CF4", CF4.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CF5.isChecked() == true) {
                     editor.putString("CF5", CF5.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CF6.isChecked() == true) {
                     editor.putString("CF6", CF6.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CF7.isChecked() == true) {
                     editor.putString("CF7", CF7.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CF8.isChecked() == true) {
                     editor.putString("CF8.", CF8.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CF9.isChecked() == true) {
                     editor.putString("CF9", CF9.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CF10.isChecked() == true) {
                     editor.putString("CF10", CF10.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (!CF1.isChecked() == true) {
@@ -289,46 +299,57 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (CM1.isChecked() == true) {
                     editor.putString("CM1", CM1.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM2.isChecked() == true) {
                     editor.putString("CM2", CM2.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM3.isChecked() == true) {
                     editor.putString("CM3", CM3.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM4.isChecked() == true) {
                     editor.putString("CM4", CM4.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM5.isChecked() == true) {
                     editor.putString("CM5", CM5.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM6.isChecked() == true) {
                     editor.putString("CM6", CM6.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM7.isChecked() == true) {
                     editor.putString("CM7", CM7.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM8.isChecked() == true) {
                     editor.putString("CM8.", CM8.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM9.isChecked() == true) {
                     editor.putString("CM9", CM9.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM10.isChecked() == true) {
                     editor.putString("CM10", CM10.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (CM11.isChecked() == true) {
                     editor.putString("CM11", CM11.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (!CM1.isChecked() == true) {
@@ -368,46 +389,57 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (TF1.isChecked() == true) {
                     editor.putString("TF1", TF1.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF2.isChecked() == true) {
                     editor.putString("TF2", TF2.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF3.isChecked() == true) {
                     editor.putString("TF3", TF3.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF4.isChecked() == true) {
                     editor.putString("TF4", TF4.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF5.isChecked() == true) {
                     editor.putString("TF5", TF5.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF6.isChecked() == true) {
                     editor.putString("TF6", TF6.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF7.isChecked() == true) {
                     editor.putString("TF7", TF7.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF8.isChecked() == true) {
                     editor.putString("TF8.", TF8.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF9.isChecked() == true) {
                     editor.putString("TF9", TF9.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF10.isChecked() == true) {
                     editor.putString("TF10", TF10.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TF11.isChecked() == true) {
                     editor.putString("TF11", TF11.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (!TF1.isChecked() == true) {
@@ -447,46 +479,57 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (TM1.isChecked() == true) {
                     editor.putString("TM1", TM1.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM2.isChecked() == true) {
                     editor.putString("TM2", TM2.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM3.isChecked() == true) {
                     editor.putString("TM3", TM3.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM4.isChecked() == true) {
                     editor.putString("TM4", TM4.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM5.isChecked() == true) {
                     editor.putString("TM5", TM5.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM6.isChecked() == true) {
                     editor.putString("TM6", TM6.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM7.isChecked() == true) {
                     editor.putString("TM7", TM7.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM8.isChecked() == true) {
                     editor.putString("TM8.", TM8.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM9.isChecked() == true) {
                     editor.putString("TM9", TM9.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM10.isChecked() == true) {
                     editor.putString("TM10", TM10.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (TM11.isChecked() == true) {
                     editor.putString("TM11", TM11.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (!TM1.isChecked() == true) {
@@ -525,22 +568,27 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (FC1.isChecked() == true) {
                     editor.putString("FC1", FC1.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (FC2.isChecked() == true) {
                     editor.putString("FC2", FC2.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (FC3.isChecked() == true) {
                     editor.putString("FC3", FC3.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (FC4.isChecked() == true) {
                     editor.putString("FC4", FC4.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (FC5.isChecked() == true) {
                     editor.putString("FC5", FC5.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (!FC1.isChecked() == true) {
@@ -561,22 +609,27 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (FH1.isChecked() == true) {
                     editor.putString("FH1", FH1.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (FH2.isChecked() == true) {
                     editor.putString("FH2", FH2.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (FH3.isChecked() == true) {
                     editor.putString("FH3", FH3.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (FH4.isChecked() == true) {
                     editor.putString("FH4", FH4.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (FH5.isChecked() == true) {
                     editor.putString("FH5", FH5.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (!FH1.isChecked() == true) {
@@ -597,58 +650,72 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (MI1.isChecked() == true) {
                     editor.putString("MI1", MI1.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI2.isChecked() == true) {
                     editor.putString("MI2", MI2.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI3.isChecked() == true) {
                     editor.putString("MI3", MI3.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI4.isChecked() == true) {
                     editor.putString("MI4", MI4.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI5.isChecked() == true) {
                     editor.putString("MI5", MI5.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI6.isChecked() == true) {
                     editor.putString("MI6", MI6.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI7.isChecked() == true) {
                     editor.putString("MI7", MI7.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI8.isChecked() == true) {
                     editor.putString("MI8.", MI8.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI9.isChecked() == true) {
                     editor.putString("MI9", MI9.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI10.isChecked() == true) {
                     editor.putString("MI10", MI10.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI11.isChecked() == true) {
                     editor.putString("MI11", MI11.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI12.isChecked() == true) {
                     editor.putString("MI12", MI12.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI13.isChecked() == true) {
                     editor.putString("MI13", MI13.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (MI14.isChecked() == true) {
                     editor.putString("MI14", MI14.getText().toString());
+                    editor.putString("CBS","FACTORES PERSONALES");
                     editor.commit();
                 }
                 if (!MI1.isChecked() == true) {
@@ -696,54 +763,67 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (SI1.isChecked() == true) {
                     editor.putString("SI1", SI1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI2.isChecked() == true) {
                     editor.putString("SI2", SI2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI3.isChecked() == true) {
                     editor.putString("SI3", SI3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI4.isChecked() == true) {
                     editor.putString("SI4", SI4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI5.isChecked() == true) {
                     editor.putString("SI5", SI5.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI6.isChecked() == true) {
                     editor.putString("SI6", SI6.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI7.isChecked() == true) {
                     editor.putString("SI7", SI7.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI8.isChecked() == true) {
                     editor.putString("SI8.", SI8.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI9.isChecked() == true) {
                     editor.putString("SI9", SI9.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI10.isChecked() == true) {
                     editor.putString("SI10", SI10.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI11.isChecked() == true) {
                     editor.putString("SI11", SI11.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI12.isChecked() == true) {
                     editor.putString("SI12", SI12.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (SI13.isChecked() == true) {
                     editor.putString("SI13", SI13.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!SI1.isChecked() == true) {
@@ -789,34 +869,42 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (II1.isChecked() == true) {
                     editor.putString("II1", II1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (II2.isChecked() == true) {
                     editor.putString("II2", II2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (II3.isChecked() == true) {
                     editor.putString("II3", II3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (II4.isChecked() == true) {
                     editor.putString("II4", II4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (II5.isChecked() == true) {
                     editor.putString("II5", II5.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (II6.isChecked() == true) {
                     editor.putString("II6", II6.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (II7.isChecked() == true) {
                     editor.putString("II7", II7.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (II8.isChecked() == true) {
                     editor.putString("II8.", II8.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!II1.isChecked() == true) {
@@ -846,50 +934,62 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (CI1.isChecked() == true) {
                     editor.putString("CI1", CI1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI2.isChecked() == true) {
                     editor.putString("CI2", CI2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI3.isChecked() == true) {
                     editor.putString("CI3", CI3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI4.isChecked() == true) {
                     editor.putString("CI4", CI4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI5.isChecked() == true) {
                     editor.putString("CI5", CI5.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI6.isChecked() == true) {
                     editor.putString("CI6", CI6.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI7.isChecked() == true) {
                     editor.putString("CI7", CI7.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI8.isChecked() == true) {
                     editor.putString("CI8.", CI8.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI9.isChecked() == true) {
                     editor.putString("CI9", CI9.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI10.isChecked() == true) {
                     editor.putString("CI10", CI10.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI11.isChecked() == true) {
                     editor.putString("CI11", CI11.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CI12.isChecked() == true) {
                     editor.putString("CI12", CI12.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!CI1.isChecked() == true) {
@@ -931,18 +1031,22 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (PI1.isChecked() == true) {
                     editor.putString("PI1", PI1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (PI2.isChecked() == true) {
                     editor.putString("PI2", PI2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (PI3.isChecked() == true) {
                     editor.putString("PI3", PI3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (PI4.isChecked() == true) {
                     editor.putString("PI4", PI4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!PI1.isChecked() == true) {
@@ -960,18 +1064,22 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (RI1.isChecked() == true) {
                     editor.putString("RI1", RI1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (RI2.isChecked() == true) {
                     editor.putString("RI2", RI2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (RI3.isChecked() == true) {
                     editor.putString("RI3", RI3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (RI4.isChecked() == true) {
                     editor.putString("RI4", RI4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!RI1.isChecked() == true) {
@@ -989,30 +1097,37 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (HE1.isChecked() == true) {
                     editor.putString("HE1", HE1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (HE2.isChecked() == true) {
                     editor.putString("HE2", HE2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (HE3.isChecked() == true) {
                     editor.putString("HE3", HE3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (HE4.isChecked() == true) {
                     editor.putString("HE4", HE4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (HE5.isChecked() == true) {
                     editor.putString("HE5", HE5.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (HE6.isChecked() == true) {
                     editor.putString("HE6", HE6.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (HE7.isChecked() == true) {
                     editor.putString("HE7", HE7.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!HE1.isChecked() == true) {
@@ -1039,18 +1154,22 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (ET1.isChecked() == true) {
                     editor.putString("ET1", ET1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (ET2.isChecked() == true) {
                     editor.putString("ET2", ET2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (ET3.isChecked() == true) {
                     editor.putString("ET3", ET3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (ET4.isChecked() == true) {
                     editor.putString("ET4", ET4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!ET1.isChecked() == true) {
@@ -1069,22 +1188,27 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (CE1.isChecked() == true) {
                     editor.putString("CE1", CE1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CE2.isChecked() == true) {
                     editor.putString("CE2", CE2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CE3.isChecked() == true) {
                     editor.putString("CE3", CE3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CE4.isChecked() == true) {
                     editor.putString("CE4", CE4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CE5.isChecked() == true) {
                     editor.putString("CE5", CE5.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!CE1.isChecked() == true) {
@@ -1105,18 +1229,22 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (ME1.isChecked() == true) {
                     editor.putString("ME1", ME1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (ME2.isChecked() == true) {
                     editor.putString("ME2", ME2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (ME3.isChecked() == true) {
                     editor.putString("ME3", ME3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (ME4.isChecked() == true) {
                     editor.putString("ME4", ME4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!ME1.isChecked() == true) {
@@ -1135,30 +1263,37 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (DE1.isChecked() == true) {
                     editor.putString("DE1", DE1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (DE2.isChecked() == true) {
                     editor.putString("DE2", DE2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (DE3.isChecked() == true) {
                     editor.putString("DE3", DE3.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (DE4.isChecked() == true) {
                     editor.putString("DE4", DE4.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (DE5.isChecked() == true) {
                     editor.putString("DE5", DE5.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (DE6.isChecked() == true) {
                     editor.putString("DE6", DE6.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (DE7.isChecked() == true) {
                     editor.putString("DE7", DE7.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!DE1.isChecked() == true) {
@@ -1185,10 +1320,12 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (CIC1.isChecked() == true) {
                     editor.putString("CIC1", CIC1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CIC2.isChecked() == true) {
                     editor.putString("CIC2", CIC2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!CIC1.isChecked() == true) {
@@ -1200,10 +1337,12 @@ public class RegistroAccidente06 extends AppCompatActivity {
 
                 if (CIN1.isChecked() == true) {
                     editor.putString("CIN1", CIN1.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (CIN2.isChecked() == true) {
                     editor.putString("CIN2", CIN2.getText().toString());
+                    editor.putString("CBS","FACTORES LABORALES");
                     editor.commit();
                 }
                 if (!CIN1.isChecked() == true) {

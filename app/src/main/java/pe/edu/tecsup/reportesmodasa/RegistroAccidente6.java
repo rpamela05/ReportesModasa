@@ -39,7 +39,6 @@ public class RegistroAccidente6 extends  AppCompatActivity {
     EditText nroRegistro;
     Button btnSiguiente;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,300 +47,6 @@ public class RegistroAccidente6 extends  AppCompatActivity {
 
         SharedPreferences pref = getSharedPreferences("Accidente", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
-
-
-        String CF1=pref.getString("CF1","");
-        String CF2=pref.getString("CF2","");
-        String CF3=pref.getString("CF3","");
-        String CF4=pref.getString("CF4","");
-        String CF5=pref.getString("CF5","");
-        String CF6=pref.getString("CF6","");
-        String CF7=pref.getString("CF7","");
-        String CF8=pref.getString("CF8","");
-        String CF9=pref.getString("CF9","");
-        String CF10=pref.getString("CF10","");
-        String CM1=pref.getString("CM1","");
-        String CM2=pref.getString("CM2","");
-        String CM3=pref.getString("CM3","");
-        String CM4=pref.getString("CM4","");
-        String CM5=pref.getString("CM5","");
-        String CM6=pref.getString("CM6","");
-        String CM7=pref.getString("CM7","");
-        String CM8=pref.getString("CM8","");
-        String CM9=pref.getString("CM9","");
-        String CM10=pref.getString("CM10","");
-        String CM11=pref.getString("CM11","");
-        String TF1=pref.getString("TF1","");
-        String TF2=pref.getString("TF2","");
-        String TF3=pref.getString("TF3","");
-        String TF4=pref.getString("TF4","");
-        String TF5=pref.getString("TF5","");
-        String TF6=pref.getString("TF6","");
-        String TF7=pref.getString("TF7","");
-        String TF8=pref.getString("TF8","");
-        String TF9=pref.getString("TF9","");
-        String TF10=pref.getString("TF10","");
-        String TF11=pref.getString("TF11","");
-        String TM1=pref.getString("TM1","");
-        String TM2=pref.getString("TM2","");
-        String TM3=pref.getString("TM3","");
-        String TM4=pref.getString("TM4","");
-        String TM5=pref.getString("TM5","");
-        String TM6=pref.getString("TM6","");
-        String TM7=pref.getString("TM7","");
-        String TM8=pref.getString("TM8","");
-        String TM9=pref.getString("TM9","");
-        String TM10=pref.getString("TM10","");
-        String TM11=pref.getString("TM11","");
-        String FC1=pref.getString("FC1","");
-        String FC2=pref.getString("FC2","");
-        String FC3=pref.getString("FC3","");
-        String FC4=pref.getString("FC4","");
-        String FC5=pref.getString("FC5","");
-        String FH1=pref.getString("FH1","");
-        String FH2=pref.getString("FH2","");
-        String FH3=pref.getString("FH3","");
-        String FH4=pref.getString("FH4","");
-        String FH5=pref.getString("FH5","");
-        String MI1=pref.getString("MI1","");
-        String MI2=pref.getString("MI2","");
-        String MI3=pref.getString("MI3","");
-        String MI4=pref.getString("MI4","");
-        String MI5=pref.getString("MI5","");
-        String MI6=pref.getString("MI6","");
-        String MI7=pref.getString("MI7","");
-        String MI8=pref.getString("MI8","");
-        String MI9=pref.getString("MI9","");
-        String MI10=pref.getString("MI10","");
-        String MI11=pref.getString("MI11","");
-        String MI12=pref.getString("MI12","");
-        String MI13=pref.getString("MI13","");
-        String MI14=pref.getString("MI14","");
-        String SI1=pref.getString("SI1","");
-        String SI2=pref.getString("SI2","");
-        String SI3=pref.getString("SI3","");
-        String SI4=pref.getString("SI4","");
-        String SI5=pref.getString("SI5","");
-        String SI6=pref.getString("SI6","");
-        String SI7=pref.getString("SI7","");
-        String SI8=pref.getString("SI8","");
-        String SI9=pref.getString("SI9","");
-        String SI10=pref.getString("SI10","");
-        String SI11=pref.getString("SI11","");
-        String SI12=pref.getString("SI12","");
-        String SI13=pref.getString("SI13","");
-        String II1=pref.getString("II1","");
-        String II2=pref.getString("II2","");
-        String II3=pref.getString("II3","");
-        String II4=pref.getString("II4","");
-        String II5=pref.getString("II5","");
-        String II6=pref.getString("II6","");
-        String II7=pref.getString("II7","");
-        String II8=pref.getString("II8","");
-        String CI01=pref.getString("CI1","");
-        String CI02=pref.getString("CI2","");
-        String CI03=pref.getString("CI3","");
-        String CI04=pref.getString("CI4","");
-        String CI05=pref.getString("CI5","");
-        String CI06=pref.getString("CI6","");
-        String CI07=pref.getString("CI7","");
-        String CI08=pref.getString("CI8","");
-        String CI09=pref.getString("CI9","");
-        String CI010=pref.getString("CI10","");
-        String CI011=pref.getString("CI11","");
-        String CI012=pref.getString("CI12","");
-        String PI1=pref.getString("PI1","");
-        String PI2=pref.getString("PI2","");
-        String PI3=pref.getString("PI3","");
-        String PI4=pref.getString("PI4","");
-        String RI1=pref.getString("RI1","");
-        String RI2=pref.getString("RI2","");
-        String RI3=pref.getString("RI3","");
-        String RI4=pref.getString("RI4","");
-        String HE1=pref.getString("HE1","");
-        String HE2=pref.getString("HE2","");
-        String HE3=pref.getString("HE3","");
-        String HE4=pref.getString("HE4","");
-        String HE5=pref.getString("HE5","");
-        String HE6=pref.getString("HE6","");
-        String HE7=pref.getString("HE7","");
-        String ET1=pref.getString("ET1","");
-        String ET2=pref.getString("ET2","");
-        String ET3=pref.getString("ET3","");
-        String ET4=pref.getString("ET4","");
-        String CE1=pref.getString("CE1","");
-        String CE2=pref.getString("CE2","");
-        String CE3=pref.getString("CE3","");
-        String CE4=pref.getString("CE4","");
-        String CE5=pref.getString("CE5","");
-        String ME1=pref.getString("ME1","");
-        String ME2=pref.getString("ME2","");
-        String ME3=pref.getString("ME3","");
-        String ME4=pref.getString("ME4","");
-        String DE1=pref.getString("DE1","");
-        String DE2=pref.getString("DE2","");
-        String DE3=pref.getString("DE3","");
-        String DE4=pref.getString("DE4","");
-        String DE5=pref.getString("DE5","");
-        String DE6=pref.getString("DE6","");
-        String DE7=pref.getString("DE7","");
-        String CIC1=pref.getString("CIC1","");
-        String CIC2=pref.getString("CIC2","");
-        String CIN1=pref.getString("CIN1","");
-        String CIN2=pref.getString("CIN2","");
-        //String[] opciones = {cf1, cf2
-                //,cf3,cf4,cf5};
-        ArrayList opciones = new ArrayList();
-        opciones.add(CF1);
-        opciones.add(CF2);
-        opciones.add(CF3);
-        opciones.add(CF4);
-        opciones.add(CF5);
-        opciones.add(CF6);
-        opciones.add(CF7);
-        opciones.add(CF8);
-        opciones.add(CF9);
-        opciones.add(CF10);
-        opciones.add(CM1);
-        opciones.add(CM2);
-        opciones.add(CM3);
-        opciones.add(CM4);
-        opciones.add(CM5);
-        opciones.add(CM6);
-        opciones.add(CM7);
-        opciones.add(CM8);
-        opciones.add(CM9);
-        opciones.add(CM10);
-        opciones.add(CM11);
-        opciones.add(TF1);
-        opciones.add(TF2);
-        opciones.add(TF3);
-        opciones.add(TF4);
-        opciones.add(TF5);
-        opciones.add(TF6);
-        opciones.add(TF7);
-        opciones.add(TF8);
-        opciones.add(TF9);
-        opciones.add(TF10);
-        opciones.add(TF11);
-        opciones.add(TM1);
-        opciones.add(TM2);
-        opciones.add(TM3);
-        opciones.add(TM4);
-        opciones.add(TM5);
-        opciones.add(TM6);
-        opciones.add(TM7);
-        opciones.add(TM8);
-        opciones.add(TM9);
-        opciones.add(TM10);
-        opciones.add(TM11);
-        opciones.add(FC1);
-        opciones.add(FC2);
-        opciones.add(FC3);
-        opciones.add(FC4);
-        opciones.add(FC5);
-        opciones.add(FH1);
-        opciones.add(FH2);
-        opciones.add(FH3);
-        opciones.add(FH4);
-        opciones.add(FH5);
-        opciones.add(MI1);
-        opciones.add(MI2);
-        opciones.add(MI3);
-        opciones.add(MI4);
-        opciones.add(MI5);
-        opciones.add(MI6);
-        opciones.add(MI7);
-        opciones.add(MI8);
-        opciones.add(MI9);
-        opciones.add(MI10);
-        opciones.add(MI11);
-        opciones.add(MI12);
-        opciones.add(MI13);
-        opciones.add(MI14);
-        opciones.add(SI1);
-        opciones.add(SI2);
-        opciones.add(SI3);
-        opciones.add(SI4);
-        opciones.add(SI5);
-        opciones.add(SI6);
-        opciones.add(SI7);
-        opciones.add(SI8);
-        opciones.add(SI9);
-        opciones.add(SI10);
-        opciones.add(SI11);
-        opciones.add(SI12);
-        opciones.add(SI13);
-        opciones.add(II1);
-        opciones.add(II2);
-        opciones.add(II3);
-        opciones.add(II4);
-        opciones.add(II5);
-        opciones.add(II6);
-        opciones.add(II7);
-        opciones.add(II8);
-        opciones.add(CI01);
-        opciones.add(CI02);
-        opciones.add(CI03);
-        opciones.add(CI04);
-        opciones.add(CI05);
-        opciones.add(CI06);
-        opciones.add(CI07);
-        opciones.add(CI08);
-        opciones.add(CI09);
-        opciones.add(CI010);
-        opciones.add(CI011);
-        opciones.add(CI012);
-        opciones.add(PI1);
-        opciones.add(PI2);
-        opciones.add(PI3);
-        opciones.add(PI4);
-        opciones.add(RI1);
-        opciones.add(RI2);
-        opciones.add(RI3);
-        opciones.add(RI4);
-        opciones.add(HE1);
-        opciones.add(HE2);
-        opciones.add(HE3);
-        opciones.add(HE4);
-        opciones.add(HE5);
-        opciones.add(HE6);
-        opciones.add(HE7);
-        opciones.add(ET1);
-        opciones.add(ET2);
-        opciones.add(ET3);
-        opciones.add(ET4);
-        opciones.add(CE1);
-        opciones.add(CE2);
-        opciones.add(CE3);
-        opciones.add(CE4);
-        opciones.add(CE5);
-        opciones.add(ME1);
-        opciones.add(ME2);
-        opciones.add(ME3);
-        opciones.add(ME4);
-        opciones.add(DE1);
-        opciones.add(DE2);
-        opciones.add(DE3);
-        opciones.add(DE4);
-        opciones.add(DE5);
-        opciones.add(DE6);
-        opciones.add(DE7);
-        opciones.add(CIC1);
-        opciones.add(CIC2);
-        opciones.add(CIN1);
-        opciones.add(CIN2);
-        ArrayList cleanList = new ArrayList();
-
-        for(int i=0; i<opciones.size();i++){
-            if (opciones.get(i) == ""){
-
-            }else{
-                cleanList.add(opciones.get(i));
-            }
-        }
-        Toast.makeText(RegistroAccidente6.this, cleanList.toString(), Toast.LENGTH_SHORT).show();
-        Toast.makeText(RegistroAccidente6.this, "aaa", Toast.LENGTH_SHORT).show();
 
 
         nroRegistro = findViewById(R.id.nroRegistro);
@@ -519,14 +224,963 @@ public class RegistroAccidente6 extends  AppCompatActivity {
         SF1=findViewById(R.id.SF1);
         SF2=findViewById(R.id.SF2);
 
+
+
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),RegistroAccidente06.class));
-                finish();
+//1
+                if(LA1.isChecked()==true){
+                    editor.putString("LA1",LA1.getText().toString());
+                    editor.commit();
+                }if(LA2.isChecked()==true){
+                    editor.putString("LA2",LA2.getText().toString());
+                    editor.commit();
+                }if(LA3.isChecked()==true){
+                    editor.putString("LA3",LA3.getText().toString());
+                    editor.commit();
+                }if(LA4.isChecked()==true){
+                    editor.putString("LA4",LA4.getText().toString());
+                    editor.commit();
+                }if(LA5.isChecked()==true){
+                    editor.putString("LA5",LA5.getText().toString());
+                    editor.commit();
+                }if(LA6.isChecked()==true){
+                    editor.putString("LA6",LA6.getText().toString());
+                    editor.commit();
+                }if(LA7.isChecked()==true){
+                    editor.putString("LA7",LA7.getText().toString());
+                    editor.commit();
+                }if(LA8.isChecked()==true) {
+                    editor.putString("LA8.", LA8.getText().toString());
+                    editor.commit();
+                }if(LA9.isChecked()==true){
+                    editor.putString("LA9",LA9.getText().toString());
+                    editor.commit();
+                }if(LA10.isChecked()==true){
+                    editor.putString("LA10",LA10.getText().toString());
+                    editor.commit();
+                }if(LA11.isChecked()==true){
+                    editor.putString("LA11",LA11.getText().toString());
+                    editor.commit();
+                }if(LA12.isChecked()==true){
+                    editor.putString("LA12",LA12.getText().toString());
+                    editor.commit();
+                }if(LA13.isChecked()==true){
+                    editor.putString("LA13", LA13.getText().toString());
+                    editor.commit();}
+
+                if (!LA1.isChecked() == true) {
+                    editor.remove("LA1").commit();
+                }
+                if (!LA2.isChecked() == true) {
+                    editor.remove("LA2").commit();
+                }
+                if (!LA3.isChecked() == true) {
+                    editor.remove("LA3").commit();
+                }
+                if (!LA4.isChecked() == true) {
+                    editor.remove("LA4").commit();
+                }
+                if (!LA5.isChecked() == true) {
+                    editor.remove("LA5").commit();
+                }
+                if (!LA6.isChecked() == true) {
+                    editor.remove("LA6").commit();
+                }
+                if (!LA7.isChecked() == true) {
+                    editor.remove("LA7").commit();
+                }
+                if (!LA8.isChecked() == true) {
+                    editor.remove("LA8").commit();
+                }
+                if (!LA9.isChecked() == true) {
+                    editor.remove("LA9").commit();
+                }
+                if (!LA10.isChecked() == true) {
+                    editor.remove("LA10").commit();
+                }
+                if (!LA11.isChecked() == true) {
+                    editor.remove("LA11").commit();
+                }
+                if (!LA12.isChecked() == true) {
+                    editor.remove("LA12").commit();
+                }
+                if (!LA13.isChecked() == true) {
+                    editor.remove("LA13").commit();
+                }
+//2
+                if(EG1.isChecked()==true){
+                    editor.putString("EG1",EG1.getText().toString());
+                    editor.commit();
+                }if(EG2.isChecked()==true){
+                    editor.putString("EG2",EG2.getText().toString());
+                    editor.commit();
+                }if(EG3.isChecked()==true){
+                    editor.putString("EG3",EG3.getText().toString());
+                    editor.commit();
+                }if(EG4.isChecked()==true){
+                    editor.putString("EG4",EG4.getText().toString());
+                    editor.commit();
+                }if(EG5.isChecked()==true){
+                    editor.putString("EG5",EG5.getText().toString());
+                    editor.commit();
+                }if(EG6.isChecked()==true) {
+                    editor.putString("EG6", EG6.getText().toString());
+                    editor.commit();
+                }
+                if (!EG1.isChecked() == true) {
+                    editor.remove("EG1").commit();
+                }
+                if (!EG2.isChecked() == true) {
+                    editor.remove("EG2").commit();
+                }
+                if (!EG3.isChecked() == true) {
+                    editor.remove("EG3").commit();
+                }
+                if (!EG4.isChecked() == true) {
+                    editor.remove("EG4").commit();
+                }
+                if (!EG5.isChecked() == true) {
+                    editor.remove("EG5").commit();
+                }
+                if (!EG6.isChecked() == true) {
+                    editor.remove("EG6").commit();
+                }
+//3
+                if(IP1.isChecked()==true){
+                    editor.putString("IP1",IP1.getText().toString());
+                    editor.commit();
+                }if(IP2.isChecked()==true){
+                    editor.putString("IP2",IP2.getText().toString());
+                    editor.commit();
+                }if(IP3.isChecked()==true){
+                    editor.putString("IP3",IP3.getText().toString());
+                    editor.commit();
+                }if(IP4.isChecked()==true){
+                    editor.putString("IP4",IP4.getText().toString());
+                    editor.commit();
+                }if(IP5.isChecked()==true){
+                    editor.putString("IP5",IP5.getText().toString());
+                    editor.commit();
+                }if(IP6.isChecked()==true){
+                    editor.putString("IP6",IP6.getText().toString());
+                    editor.commit();
+                }if(IP7.isChecked()==true){
+                    editor.putString("IP7",IP7.getText().toString());
+                    editor.commit();
+                }if(IP8.isChecked()==true) {
+                    editor.putString("IP8.", IP8.getText().toString());
+                    editor.commit();
+                }if(IP9.isChecked()==true){
+                    editor.putString("IP9",IP9.getText().toString());
+                    editor.commit();
+                }
+
+                if (!IP1.isChecked() == true) {
+                    editor.remove("IP1").commit();
+                }
+                if (!IP2.isChecked() == true) {
+                    editor.remove("IP2").commit();
+                }
+                if (!IP3.isChecked() == true) {
+                    editor.remove("IP3").commit();
+                }
+                if (!IP4.isChecked() == true) {
+                    editor.remove("IP4").commit();
+                }
+                if (!IP5.isChecked() == true) {
+                    editor.remove("IP5").commit();
+                }
+                if (!IP6.isChecked() == true) {
+                    editor.remove("IP6").commit();
+                }
+                if (!IP7.isChecked() == true) {
+                    editor.remove("IP7").commit();
+                }
+                if (!IP8.isChecked() == true) {
+                    editor.remove("IP").commit();
+                }
+                if (!IP9.isChecked() == true) {
+                    editor.remove("IP9").commit();
+                }
+//4
+                if(AP1.isChecked()==true){
+                    editor.putString("AP1",AP1.getText().toString());
+                    editor.commit();
+                }if(AP2.isChecked()==true){
+                    editor.putString("AP2",AP2.getText().toString());
+                    editor.commit();
+                }if(AP3.isChecked()==true){
+                    editor.putString("AP3",AP3.getText().toString());
+                    editor.commit();
+                }if(AP4.isChecked()==true){
+                    editor.putString("AP4",AP4.getText().toString());
+                    editor.commit();
+                }if(AP5.isChecked()==true){
+                    editor.putString("AP5",AP5.getText().toString());
+                    editor.commit();
+                }if(AP6.isChecked()==true){
+                    editor.putString("AP6",AP6.getText().toString());
+                    editor.commit();
+                }
+
+                if (!AP1.isChecked() == true) {
+                    editor.remove("AP1").commit();
+                }
+                if (!AP2.isChecked() == true) {
+                    editor.remove("AP2").commit();
+                }
+                if (!AP3.isChecked() == true) {
+                    editor.remove("AP3").commit();
+                }
+                if (!AP4.isChecked() == true) {
+                    editor.remove("AP4").commit();
+                }
+                if (!AP5.isChecked() == true) {
+                    editor.remove("AP5").commit();
+                }
+                if (!AP6.isChecked() == true) {
+                    editor.remove("AP6").commit();
+                }
+//5
+                if(IA1.isChecked()==true){
+                    editor.putString("IA1",IA1.getText().toString());
+                    editor.commit();
+                }if(IA2.isChecked()==true){
+                    editor.putString("IA2",IA2.getText().toString());
+                    editor.commit();
+                }if(IA3.isChecked()==true){
+                    editor.putString("IA3",IA3.getText().toString());
+                    editor.commit();
+                }if(IA4.isChecked()==true){
+                    editor.putString("IA4",IA4.getText().toString());
+                    editor.commit();
+                }if(IA5.isChecked()==true){
+                    editor.putString("IA5",IA5.getText().toString());
+                    editor.commit();
+                }if(IA6.isChecked()==true){
+                    editor.putString("IA6",IA6.getText().toString());
+                    editor.commit();
+                }if(IA7.isChecked()==true){
+                    editor.putString("IA7",IA7.getText().toString());
+                    editor.commit();
+                }if(IA8.isChecked()==true) {
+                    editor.putString("IA8.", IA8.getText().toString());
+                    editor.commit();
+                }if(IA9.isChecked()==true){
+                    editor.putString("IA9",IA9.getText().toString());
+                    editor.commit();
+                }
+                if (!IA1.isChecked() == true) {
+                    editor.remove("IA1").commit();
+                }
+                if (!IA2.isChecked() == true) {
+                    editor.remove("IA2").commit();
+                }
+                if (!IA3.isChecked() == true) {
+                    editor.remove("IA3").commit();
+                }
+                if (!IA4.isChecked() == true) {
+                    editor.remove("IA4").commit();
+                }
+                if (!IA5.isChecked() == true) {
+                    editor.remove("IA5").commit();
+                }
+                if (!IA6.isChecked() == true) {
+                    editor.remove("IA6").commit();
+                }
+                if (!IA7.isChecked() == true) {
+                    editor.remove("IA7").commit();
+                }
+                if (!IA8.isChecked() == true) {
+                    editor.remove("IA8").commit();
+                }
+                if (!IA9.isChecked() == true) {
+                    editor.remove("IA9").commit();
+                }
+//  6
+                if(OT1.isChecked()==true){
+                    editor.putString("OT1",OT1.getText().toString());
+                    editor.commit();
+                }if(OT2.isChecked()==true){
+                    editor.putString("OT2",OT2.getText().toString());
+                    editor.commit();
+                }if(OT3.isChecked()==true){
+                    editor.putString("OT3",OT3.getText().toString());
+                    editor.commit();
+                }if(OT4.isChecked()==true){
+                    editor.putString("OT4",OT4.getText().toString());
+                    editor.commit();
+                }if(OT5.isChecked()==true){
+                    editor.putString("OT5",OT5.getText().toString());
+                    editor.commit();
+                }if(OT6.isChecked()==true){
+                    editor.putString("OT6",OT6.getText().toString());
+                    editor.commit();
+                }
+
+                if (!OT1.isChecked() == true) {
+                    editor.remove("OT1").commit();
+                }
+                if (!OT2.isChecked() == true) {
+                    editor.remove("OT2").commit();
+                }
+                if (!OT3.isChecked() == true) {
+                    editor.remove("OT3").commit();
+                }
+                if (!OT4.isChecked() == true) {
+                    editor.remove("OT4").commit();
+                }
+                if (!OT5.isChecked() == true) {
+                    editor.remove("OT5").commit();
+                }
+                if (!OT6.isChecked() == true) {
+                    editor.remove("OT6").commit();
+                }
+//  7
+                if(PE1.isChecked()==true){
+                    editor.putString("PE1",PE1.getText().toString());
+                    editor.commit();
+                }if(PE2.isChecked()==true){
+                    editor.putString("PE2",PE2.getText().toString());
+                    editor.commit();
+                }if(PE3.isChecked()==true){
+                    editor.putString("PE3",PE3.getText().toString());
+                    editor.commit();
+                }if(PE4.isChecked()==true){
+                    editor.putString("PE4",PE4.getText().toString());
+                    editor.commit();
+                }if(PE5.isChecked()==true){
+                    editor.putString("PE5",PE5.getText().toString());
+                    editor.commit();
+                }if(PE6.isChecked()==true){
+                    editor.putString("PE6",PE6.getText().toString());
+                    editor.commit();
+                }if(PE7.isChecked()==true){
+                    editor.putString("PE7",PE7.getText().toString());
+                    editor.commit();
+                }if(PE8.isChecked()==true) {
+                    editor.putString("PE8.", PE8.getText().toString());
+                    editor.commit();
+                }if(PE9.isChecked()==true){
+                    editor.putString("PE9",PE9.getText().toString());
+                    editor.commit();
+                }if(PE10.isChecked()==true){
+                    editor.putString("PE10",PE10.getText().toString());
+                    editor.commit();
+                }if(PE11.isChecked()==true){
+                    editor.putString("PE11",PE11.getText().toString());
+                    editor.commit();
+                }if(PE12.isChecked()==true){
+                    editor.putString("PE12",PE12.getText().toString());
+                    editor.commit();
+                }if(PE13.isChecked()==true){
+                    editor.putString("PE13",PE13.getText().toString());
+                    editor.commit();
+                }if(PE13.isChecked()==true){
+                    editor.putString("PE13",PE13.getText().toString());
+                    editor.commit();
+                }if(PE14.isChecked()==true){
+                    editor.putString("PE14",PE14.getText().toString());
+                    editor.commit();}
+
+                if (!PE1.isChecked() == true) {
+                    editor.remove("PE1").commit();
+                }
+                if (!PE2.isChecked() == true) {
+                    editor.remove("PE2").commit();
+                }
+                if (!PE3.isChecked() == true) {
+                    editor.remove("PE3").commit();
+                }
+                if (!PE4.isChecked() == true) {
+                    editor.remove("PE4").commit();
+                }
+                if (!PE5.isChecked() == true) {
+                    editor.remove("PE5").commit();
+                }
+                if (!PE6.isChecked() == true) {
+                    editor.remove("PE6").commit();
+                }
+                if (!PE7.isChecked() == true) {
+                    editor.remove("PE7").commit();
+                }
+                if (!PE8.isChecked() == true) {
+                    editor.remove("PE8").commit();
+                }
+                if (!PE9.isChecked() == true) {
+                    editor.remove("PE9").commit();
+                }
+                if (!PE10.isChecked() == true) {
+                    editor.remove("PE10").commit();
+                }
+                if (!PE11.isChecked() == true) {
+                    editor.remove("PE11").commit();
+                }
+                if (!PE12.isChecked() == true) {
+                    editor.remove("PE12").commit();
+                }
+                if (!PE13.isChecked() == true) {
+                    editor.remove("PE13").commit();
+                }
+                if (!PE14.isChecked() == true) {
+                    editor.remove("PE14").commit();
+                }
+//8
+                if(RC1.isChecked()==true){
+                    editor.putString("RC1",RC1.getText().toString());
+                    editor.commit();
+                }if(RC2.isChecked()==true){
+                    editor.putString("RC2",RC2.getText().toString());
+                    editor.commit();
+                }if(RC3.isChecked()==true){
+                    editor.putString("RC3",RC3.getText().toString());
+                    editor.commit();
+                }if(RC4.isChecked()==true){
+                    editor.putString("RC4",RC4.getText().toString());
+                    editor.commit();
+                }if(RC5.isChecked()==true){
+                    editor.putString("RC5",RC5.getText().toString());
+                    editor.commit();
+                }if(RC6.isChecked()==true){
+                    editor.putString("RC6",RC6.getText().toString());
+                    editor.commit();
+                }if(RC7.isChecked()==true){
+                    editor.putString("RC7",RC7.getText().toString());
+                    editor.commit();
+                }
+                if (!RC1.isChecked() == true) {
+                    editor.remove("RC1").commit();
+                }
+                if (!RC2.isChecked() == true) {
+                    editor.remove("RC2").commit();
+                }
+                if (!RC3.isChecked() == true) {
+                    editor.remove("RC3").commit();
+                }
+                if (!RC4.isChecked() == true) {
+                    editor.remove("RC4").commit();
+                }
+                if (!RC5.isChecked() == true) {
+                    editor.remove("RC5").commit();
+                }
+                if (!RC6.isChecked() == true) {
+                    editor.remove("RC6").commit();
+                }
+                if (!RC7.isChecked() == true) {
+                    editor.remove("RC7").commit();
+                }
+//    9
+
+                if(AA1.isChecked()==true){
+                    editor.putString("AA1",AA1.getText().toString());
+                    editor.commit();
+                }if(AA2.isChecked()==true){
+                    editor.putString("AA2",AA2.getText().toString());
+                    editor.commit();
+                }if(AA3.isChecked()==true){
+                    editor.putString("AA3",AA3.getText().toString());
+                    editor.commit();
+                }if(AA4.isChecked()==true){
+                    editor.putString("AA4",AA4.getText().toString());
+                    editor.commit();
+                }if(AA5.isChecked()==true){
+                    editor.putString("AA5",AA5.getText().toString());
+                    editor.commit();
+                }
+
+
+                if (!AA1.isChecked() == true) {
+                    editor.remove("AA1").commit();
+                }
+                if (!AA2.isChecked() == true) {
+                    editor.remove("AA2").commit();
+                }
+                if (!AA3.isChecked() == true) {
+                    editor.remove("AA3").commit();
+                }
+                if (!AA4.isChecked() == true) {
+                    editor.remove("AA4").commit();
+                }
+                if (!AA5.isChecked() == true) {
+                    editor.remove("AA5").commit();
+                }
+
+//  10
+
+                if(EP1.isChecked()==true){
+                    editor.putString("EP1",EP1.getText().toString());
+                    editor.commit();
+                }if(EP2.isChecked()==true){
+                    editor.putString("EP2",EP2.getText().toString());
+                    editor.commit();
+                }if(EP3.isChecked()==true){
+                    editor.putString("EP3",EP3.getText().toString());
+                    editor.commit();
+                }
+
+                if (!EP1.isChecked() == true) {
+                    editor.remove("EP1").commit();
+                }
+                if (!EP2.isChecked() == true) {
+                    editor.remove("EP2").commit();
+                }
+                if (!EP3.isChecked() == true) {
+                    editor.remove("EP3").commit();
+                }
+// 11
+                if(EPP1.isChecked()==true){
+                    editor.putString("EPP1",EPP1.getText().toString());
+                    editor.commit();
+                }if(EPP2.isChecked()==true){
+                    editor.putString("EPP2",EPP2.getText().toString());
+                    editor.commit();
+                }if(EPP3.isChecked()==true){
+                    editor.putString("EPP3",EPP3.getText().toString());
+                    editor.commit();
+                }if(EPP4.isChecked()==true){
+                    editor.putString("EPP4",EPP4.getText().toString());
+                    editor.commit();
+                }
+
+                if (!EPP1.isChecked() == true) {
+                    editor.remove("EPP1").commit();
+                }
+                if (!EPP2.isChecked() == true) {
+                    editor.remove("EPP2").commit();
+                }
+                if (!EPP3.isChecked() == true) {
+                    editor.remove("EPP3").commit();
+                }
+                if (!EPP4.isChecked() == true) {
+                    editor.remove("EPP4").commit();
+                }
+//12
+                if(CS1.isChecked()==true){
+                    editor.putString("CS1",CS1.getText().toString());
+                    editor.commit();
+                }if(CS2.isChecked()==true){
+                    editor.putString("CS2",CS2.getText().toString());
+                    editor.commit();
+                }if(CS3.isChecked()==true){
+                    editor.putString("CS3",CS3.getText().toString());
+                    editor.commit();
+                }if(CS4.isChecked()==true){
+                    editor.putString("CS4",CS4.getText().toString());
+                    editor.commit();
+                }if(CS5.isChecked()==true){
+                    editor.putString("CS5",CS5.getText().toString());
+                    editor.commit();
+                }if(CS6.isChecked()==true){
+                    editor.putString("CS6",CS6.getText().toString());
+                    editor.commit();
+                }if(CS7.isChecked()==true){
+                    editor.putString("CS7",CS7.getText().toString());
+                    editor.commit();
+                }if(CS8.isChecked()==true) {
+                    editor.putString("CS8.", CS8.getText().toString());
+                    editor.commit();
+                }
+
+                if (!CS1.isChecked() == true) {
+                    editor.remove("CS1").commit();
+                }
+                if (!CS2.isChecked() == true) {
+                    editor.remove("CS2").commit();
+                }
+                if (!CS3.isChecked() == true) {
+                    editor.remove("CS3").commit();
+                }
+                if (!CS4.isChecked() == true) {
+                    editor.remove("CS4").commit();
+                }
+                if (!CS5.isChecked() == true) {
+                    editor.remove("CS5").commit();
+                }
+                if (!CS6.isChecked() == true) {
+                    editor.remove("CS6").commit();
+                }
+                if (!CS7.isChecked() == true) {
+                    editor.remove("CS7").commit();
+                }
+                if (!CS8.isChecked() == true) {
+                    editor.remove("CS8").commit();
+                }
+
+//13
+                if(SE1.isChecked()==true){
+                    editor.putString("SE1",SE1.getText().toString());
+                    editor.commit();
+                }if(SE2.isChecked()==true){
+                    editor.putString("SE2",SE2.getText().toString());
+                    editor.commit();
+                }if(SE3.isChecked()==true){
+                    editor.putString("SE3",SE3.getText().toString());
+                    editor.commit();
+                }if(SE4.isChecked()==true){
+                    editor.putString("SE4",SE4.getText().toString());
+                    editor.commit();
+                }if(SE5.isChecked()==true){
+                    editor.putString("SE5",SE5.getText().toString());
+                    editor.commit();
+                }
+
+                if (!SE1.isChecked() == true) {
+                    editor.remove("SE1").commit();
+                }
+                if (!SE2.isChecked() == true) {
+                    editor.remove("SE2").commit();
+                }
+                if (!SE3.isChecked() == true) {
+                    editor.remove("SE3").commit();
+                }
+                if (!SE4.isChecked() == true) {
+                    editor.remove("SE4").commit();
+                }
+                if (!SE5.isChecked() == true) {
+                    editor.remove("SE5").commit();
+                }
+
+//   14
+                if(CI1.isChecked()==true){
+                    editor.putString("CI1",CI1.getText().toString());
+                    editor.commit();
+                }if(CI2.isChecked()==true){
+                    editor.putString("CI2",CI2.getText().toString());
+                    editor.commit();
+                }if(CI3.isChecked()==true){
+                    editor.putString("CI3",CI3.getText().toString());
+                    editor.commit();
+                }
+
+                if (!CI1.isChecked() == true) {
+                    editor.remove("CI1").commit();
+                }
+                if (!CI2.isChecked() == true) {
+                    editor.remove("CI2").commit();
+                }
+                if (!CI3.isChecked() == true) {
+                    editor.remove("CI3").commit();
+                }
+//  15
+
+                if(CP1.isChecked()==true){
+                    editor.putString("CP1",CP1.getText().toString());
+                    editor.commit();
+                }if(CP2.isChecked()==true){
+                    editor.putString("CP2",CP2.getText().toString());
+                    editor.commit();
+                }if(CP3.isChecked()==true){
+                    editor.putString("CP3",CP3.getText().toString());
+                    editor.commit();
+                }
+
+                if (!CP1.isChecked() == true) {
+                    editor.remove("CP1").commit();
+                }
+                if (!CP2.isChecked() == true) {
+                    editor.remove("CP2").commit();
+                }
+                if (!CP3.isChecked() == true) {
+                    editor.remove("CP3").commit();
+                }
+
+//16
+                if(RG1.isChecked()==true){
+                    editor.putString("RG1",RG1.getText().toString());
+                    editor.commit();
+                }if(RG2.isChecked()==true){
+                    editor.putString("RG2",RG2.getText().toString());
+                    editor.commit();
+                }if(RG3.isChecked()==true){
+                    editor.putString("RG3",RG3.getText().toString());
+                    editor.commit();
+                }if(RG4.isChecked()==true){
+                    editor.putString("RG4",RG4.getText().toString());
+                    editor.commit();
+                }
+
+                if (!RG1.isChecked() == true) {
+                    editor.remove("RG1").commit();
+                }
+                if (!RG2.isChecked() == true) {
+                    editor.remove("RG2").commit();
+                }
+                if (!RG3.isChecked() == true) {
+                    editor.remove("RG3").commit();
+                }
+                if (!RG4.isChecked() == true) {
+                    editor.remove("RG4").commit();
+                }
+// 17
+
+                if(PG1.isChecked()==true){
+                    editor.putString("PG1",PG1.getText().toString());
+                    editor.commit();
+                }if(PG2.isChecked()==true){
+                    editor.putString("PG2",PG2.getText().toString());
+                    editor.commit();
+                }if(PG3.isChecked()==true){
+                    editor.putString("PG3",PG3.getText().toString());
+                    editor.commit();
+                }if(PG4.isChecked()==true){
+                    editor.putString("PG4",PG4.getText().toString());
+                    editor.commit();
+                }if(PG5.isChecked()==true){
+                    editor.putString("PG5",PG5.getText().toString());
+                    editor.commit();
+                }if(PG6.isChecked()==true){
+                    editor.putString("PG6",PG6.getText().toString());
+                    editor.commit();
+                }if(PG7.isChecked()==true){
+                    editor.putString("PG7",PG7.getText().toString());
+                    editor.commit();
+                }if(PG8.isChecked()==true) {
+                    editor.putString("PG8.", PG8.getText().toString());
+                    editor.commit();
+                }
+
+                if (!PG1.isChecked() == true) {
+                    editor.remove("PG1").commit();
+                }
+                if (!PG2.isChecked() == true) {
+                    editor.remove("PG2").commit();
+                }
+                if (!PG3.isChecked() == true) {
+                    editor.remove("PG3").commit();
+                }
+                if (!PG4.isChecked() == true) {
+                    editor.remove("PG4").commit();
+                }
+                if (!PG5.isChecked() == true) {
+                    editor.remove("PG5").commit();
+                }
+                if (!PG6.isChecked() == true) {
+                    editor.remove("PG6").commit();
+                }
+                if (!PG7.isChecked() == true) {
+                    editor.remove("PG7").commit();
+                }
+                if (!PG8.isChecked() == true) {
+                    editor.remove("PG8").commit();
+                }
+// 18
+                if(CCP1.isChecked()==true){
+                    editor.putString("CCP1",CCP1.getText().toString());
+                    editor.commit();
+                }if(CCP2.isChecked()==true){
+                    editor.putString("CCP2",CCP2.getText().toString());
+                    editor.commit();
+                }if(CCP3.isChecked()==true){
+                    editor.putString("CCP3",CCP3.getText().toString());
+                    editor.commit();
+                }if(CCP4.isChecked()==true){
+                    editor.putString("CCP4",CCP4.getText().toString());
+                    editor.commit();
+                }
+
+                if (!CCP1.isChecked() == true) {
+                    editor.remove("CCP1").commit();
+                }
+                if (!CCP2.isChecked() == true) {
+                    editor.remove("CCP2").commit();
+                }
+                if (!CCP3.isChecked() == true) {
+                    editor.remove("CCP3").commit();
+                }
+                if (!CCP4.isChecked() == true) {
+                    editor.remove("CCP4").commit();
+                }
+//19
+                if(CC1.isChecked()==true){
+                    editor.putString("CC1",CC1.getText().toString());
+                    editor.commit();
+                }if(CC2.isChecked()==true){
+                    editor.putString("CC2",CC2.getText().toString());
+                    editor.commit();
+                }
+                if (!CC1.isChecked() == true) {
+                    editor.remove("CC1").commit();
+                }
+                if (!CC2.isChecked() == true) {
+                    editor.remove("CC2").commit();
+                }
+
+
+//  20
+                if(SF1.isChecked()==true){
+                    editor.putString("SF1",SF1.getText().toString());
+                    editor.commit();
+                }if(SF2.isChecked()==true){
+                    editor.putString("SF2",SF2.getText().toString());
+                    editor.commit();
+                }
+                if (!SF1.isChecked() == true) {
+                    editor.remove("SF1").commit();
+                }
+                if (!SF2.isChecked() == true) {
+                    editor.remove("SF2").commit();
+                }
+//CHECKED
+
+//                        --1
+                if (LA1.isChecked() == true ||
+                        LA2.isChecked() == true ||
+                        LA3.isChecked() == true ||
+                        LA4.isChecked() == true ||
+                        LA5.isChecked() == true ||
+                        LA6.isChecked() == true ||
+                        LA7.isChecked() == true ||
+                        LA8.isChecked() == true ||
+                        LA9.isChecked() == true ||
+                        LA10.isChecked() == true ||
+                        LA11.isChecked() == true ||
+                        LA12.isChecked() == true ||
+                        LA13.isChecked() == true ||
+//                        --2
+                        EG1.isChecked() == true ||
+                        EG2.isChecked() == true ||
+                        EG3.isChecked() == true ||
+                        EG4.isChecked() == true ||
+                        EG5.isChecked() == true ||
+                        EG6.isChecked() == true ||
+//                        --3
+                        IP1.isChecked() == true ||
+                        IP2.isChecked() == true ||
+                        IP3.isChecked() == true ||
+                        IP4.isChecked() == true ||
+                        IP5.isChecked() == true ||
+                        IP6.isChecked() == true ||
+                        IP7.isChecked() == true ||
+                        IP8.isChecked() == true ||
+                        IP9.isChecked() == true ||
+//                       ---4
+                        AP1.isChecked() == true ||
+                        AP2.isChecked() == true ||
+                        AP3.isChecked() == true ||
+                        AP4.isChecked() == true ||
+                        AP5.isChecked() == true ||
+                        AP6.isChecked() == true ||
+//                       ---5
+                        IA1.isChecked() == true ||
+                        IA2.isChecked() == true ||
+                        IA3.isChecked() == true ||
+                        IA4.isChecked() == true ||
+                        IA5.isChecked() == true ||
+                        IA6.isChecked() == true ||
+                        IA7.isChecked() == true ||
+                        IA8.isChecked() == true ||
+                        IA9.isChecked() == true ||
+//                        --
+                        OT1.isChecked() == true ||
+                        OT2.isChecked() == true ||
+                        OT3.isChecked() == true ||
+                        OT4.isChecked() == true ||
+                        OT5.isChecked() == true ||
+                        OT6.isChecked() == true ||
+//                        --
+                        PE1.isChecked() == true ||
+                        PE2.isChecked() == true ||
+                        PE3.isChecked() == true ||
+                        PE4.isChecked() == true ||
+                        PE5.isChecked() == true ||
+                        PE6.isChecked() == true ||
+                        PE7.isChecked() == true ||
+                        PE8.isChecked() == true ||
+                        PE9.isChecked() == true ||
+                        PE10.isChecked() == true ||
+                        PE11.isChecked() == true ||
+                        PE12.isChecked() == true ||
+                        PE13.isChecked() == true ||
+                        PE14.isChecked() == true ||
+//                        --
+                        RC1.isChecked() == true ||
+                        RC2.isChecked() == true ||
+                        RC3.isChecked() == true ||
+                        RC4.isChecked() == true ||
+                        RC5.isChecked() == true ||
+                        RC6.isChecked() == true ||
+                        RC7.isChecked() == true ||
+//                        --
+                        AA1.isChecked() == true ||
+                        AA2.isChecked() == true ||
+                        AA3.isChecked() == true ||
+                        AA4.isChecked() == true ||
+                        AA5.isChecked() == true ||
+//                        --
+
+                        EP1.isChecked() == true ||
+                        EP2.isChecked() == true ||
+                        EP3.isChecked() == true ||
+//                        --
+
+                        EPP1.isChecked() == true ||
+                        EPP2.isChecked() == true ||
+                        EPP3.isChecked() == true ||
+                        EPP4.isChecked() == true ||
+//                        --
+                        CS1.isChecked() == true ||
+                        CS2.isChecked() == true ||
+                        CS3.isChecked() == true ||
+                        CS4.isChecked() == true ||
+                        CS5.isChecked() == true ||
+                        CS6.isChecked() == true ||
+                        CS7.isChecked() == true ||
+                        CS8.isChecked() == true ||
+//                        --
+                        SE1.isChecked() == true ||
+                        SE2.isChecked() == true ||
+                        SE3.isChecked() == true ||
+                        SE4.isChecked() == true ||
+                        SE5.isChecked() == true ||
+//                        --
+                        CI1.isChecked() == true ||
+                        CI2.isChecked() == true ||
+                        CI3.isChecked() == true ||
+//                        --
+                        CP1.isChecked() == true ||
+                        CP2.isChecked() == true ||
+                        CP3.isChecked() == true ||
+//                       --
+                        RG1.isChecked() == true ||
+                        RG2.isChecked() == true ||
+                        RG3.isChecked() == true ||
+                        RG4.isChecked() == true ||
+//                        --
+                        PG1.isChecked() == true ||
+                        PG2.isChecked() == true ||
+                        PG3.isChecked() == true ||
+                        PG4.isChecked() == true ||
+                        PG5.isChecked() == true ||
+                        PG6.isChecked() == true ||
+                        PG7.isChecked() == true ||
+                        PG8.isChecked() == true ||
+//                        --
+                        CCP1.isChecked() == true ||
+                        CCP2.isChecked() == true ||
+                        CCP3.isChecked() == true ||
+                        CCP4.isChecked() == true ||
+//                         --
+                        CC1.isChecked() == true ||
+                        CC2.isChecked() == true ||
+//                        --
+                        SF1.isChecked() == true ||
+                        SF2.isChecked() == true ) {
+
+
+
+                    startActivity(new Intent(getApplicationContext(), RegistroAccidente7.class));
+                    finish();
+                } else {
+                    Toast.makeText(RegistroAccidente6.this, "Seleccione al menos una opción", Toast.LENGTH_SHORT).show();
+                }
+
+
             }
         });
     }
 }
+
 
 

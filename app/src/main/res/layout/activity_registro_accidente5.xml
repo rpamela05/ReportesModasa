@@ -147,28 +147,34 @@
                 android:id="@+id/AS10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Posición indebida"
+                android:text="Levantar incorrectamente "
                 android:textSize="12dp"/>
             <CheckBox
                 android:id="@+id/AS11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dar servicio a equipo en funcionamiento"
+                android:text="Posición indebida"
                 android:textSize="12dp"/>
             <CheckBox
                 android:id="@+id/AS12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Jugueteo"
+                android:text="Dar servicio a equipo en funcionamiento"
                 android:textSize="12dp"/>
             <CheckBox
                 android:id="@+id/AS13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bajo la influencia del alcohol y/u otras drogas"
+                android:text="Jugueteo"
                 android:textSize="12dp"/>
             <CheckBox
                 android:id="@+id/AS14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bajo la influencia del alcohol y/u otras drogas"
+                android:textSize="12dp"/>
+            <CheckBox
+                android:id="@+id/AS15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Uso indebido del Equipo"
