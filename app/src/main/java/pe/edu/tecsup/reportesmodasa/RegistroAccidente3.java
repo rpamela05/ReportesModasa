@@ -89,6 +89,7 @@ public class RegistroAccidente3 extends AppCompatActivity {
                     Toast.makeText(RegistroAccidente3.this, "Rellene los datos", Toast.LENGTH_SHORT).show();
                 }else{
                 editor.putString("edtDescripcion",edtDescripcion.getText().toString());
+                editor.putString("codigo",nroRegistro.getText().toString());
                 editor.commit();
                 startActivity(new Intent(getApplicationContext(),RegistroAccidente4.class));
                 finish();
@@ -98,7 +99,7 @@ public class RegistroAccidente3 extends AppCompatActivity {
     }
 
     private void mostrarDialogoOpciones3() {
-        final CharSequence[] opciones={"Tomar Foto","Elegir de Galeria","Cancelar"};
+        final CharSequence[] opciones={"Elegir de Galeria","Cancelar"};
         final AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.setTitle("Elegir una Opción");
         builder.setItems(opciones, new DialogInterface.OnClickListener() {
@@ -121,7 +122,7 @@ public class RegistroAccidente3 extends AppCompatActivity {
     }
 
     private void mostrarDialogoOpciones2() {
-        final CharSequence[] opciones={"Tomar Foto","Elegir de Galeria","Cancelar"};
+        final CharSequence[] opciones={"Elegir de Galeria","Cancelar"};
         final AlertDialog.Builder builder=new AlertDialog.Builder(this);
         builder.setTitle("Elegir una Opción");
         builder.setItems(opciones, new DialogInterface.OnClickListener() {

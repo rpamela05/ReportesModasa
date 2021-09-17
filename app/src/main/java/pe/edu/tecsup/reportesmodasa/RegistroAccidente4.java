@@ -48,7 +48,7 @@ public class RegistroAccidente4 extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                editor.putString("codigo",nroRegistro.getText().toString());
                 if(c1.isChecked()==true){
                     editor.putString("c1",c1.getText().toString());
                     editor.commit();

@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -23,6 +24,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.colors.DeviceRgb;
@@ -48,45 +52,64 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class RegistroAccidente12 extends AppCompatActivity {
+    private static final String LOG_TAG = "";
     Button btnDescargar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_accidente12);
         getSupportActionBar().hide();
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            checkExternalStoragePermission();
+        }
         btnDescargar=findViewById(R.id.btnDescargar);
 
         btnDescargar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),RegistroAccidente12.class));
-                finish();
                 try {
                     createPDF();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+                SharedPreferences pref= getSharedPreferences("Accidente", Context.MODE_PRIVATE);
 
-                ContextWrapper contextWrapper= new ContextWrapper(getApplicationContext());
-                File file = new File(contextWrapper.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), "pdf.pdf");
-                Uri path= Uri.fromFile(file);
-                if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
-                    path = FileProvider.getUriForFile(RegistroAccidente12.this, BuildConfig.APPLICATION_ID+".provider",file);
-                }
-
-
-                Intent pdfpOpe= new Intent(Intent.ACTION_VIEW);
-                pdfpOpe.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                pdfpOpe.setDataAndType(path,"application/pdf");
-                Toast.makeText(contextWrapper, path.toString(), Toast.LENGTH_SHORT).show();
-                try{
-                    startActivity(pdfpOpe);
-                }catch (ActivityNotFoundException e) {
-                    Toast.makeText(contextWrapper, e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
+                Date date = new Date() ;
+                String timeStamp = new SimpleDateFormat("yyyyMMdd").format(date);
+                String codigo=pref.getString("codigo","");
+                
+                displayPDF();
             }
         });
+    }
+
+    private void displayPDF() {
+        SharedPreferences pref= getSharedPreferences("Accidente", Context.MODE_PRIVATE);
+        Date date = new Date() ;
+        String timeStamp = new SimpleDateFormat("yyyyMMdd").format(date);
+        String codigo=pref.getString("codigo","");
+
+
+        ContextWrapper contextWrapper= new ContextWrapper(getApplicationContext());
+        File filepath = new File(contextWrapper.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), codigo+timeStamp+".pdf");
+        Uri path= Uri.fromFile(filepath);
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.N){
+            path = FileProvider.getUriForFile(RegistroAccidente12.this, BuildConfig.APPLICATION_ID+".provider",filepath);
+        }
+
+        Intent pdfpOpe= new Intent(Intent.ACTION_VIEW);
+        pdfpOpe.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        pdfpOpe.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        pdfpOpe.setDataAndType(path,"application/pdf");
+
+        Intent intent= Intent.createChooser(pdfpOpe,"Open File");
+        try{
+            startActivity(pdfpOpe);
+            finish();
+        }catch (ActivityNotFoundException e) {
+            Toast.makeText(RegistroAccidente12.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     private void checkExternalStoragePermission() {
@@ -95,12 +118,10 @@ public class RegistroAccidente12 extends AppCompatActivity {
         if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 225);
         }else {
-            Toast.makeText(this, "aaaaaaaaaaa", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void createPDF() throws FileNotFoundException {
-
 
         SharedPreferences pref= getSharedPreferences("Accidente", Context.MODE_PRIVATE);
         String LA1=pref.getString("LA1","");
@@ -355,6 +376,8 @@ public class RegistroAccidente12 extends AppCompatActivity {
                 cleanList.add(opcodes.get(i));
             }
         }
+
+
 
 
         String CS01=pref.getString("CS01","");
@@ -736,11 +759,50 @@ public class RegistroAccidente12 extends AppCompatActivity {
             }
         }
 
-        String dni=pref.getString("dni","");
+        String medida1 = "",medida2="", medida3="", medida4="", medida5="";
+
+        if (cleanList.size()==5){
+            medida1=cleanList.get(0).toString();
+            medida2=cleanList.get(1).toString();
+            medida3=cleanList.get(2).toString();
+            medida4=cleanList.get(3).toString();
+            medida5=cleanList.get(4).toString();
+        }
+        if (cleanList.size()==4){
+            medida1=cleanList.get(0).toString();
+            medida2=cleanList.get(1).toString();
+            medida3=cleanList.get(2).toString();
+            medida4=cleanList.get(3).toString();
+            medida5="";
+        }
+        if (cleanList.size()==3){
+            medida1=cleanList.get(0).toString();
+            medida2=cleanList.get(1).toString();
+            medida3=cleanList.get(2).toString();
+            medida4="";
+            medida5="";
+        }
+        if (cleanList.size()==2){
+            medida1=cleanList.get(0).toString();
+            medida2=cleanList.get(1).toString();
+            medida3="";
+            medida4="";
+            medida5="";
+        }
+        if (cleanList.size()==1){
+            medida1=cleanList.get(0).toString();
+            medida2="";
+            medida3="";
+            medida4="";
+            medida5="";
+        }
+
+
+
         String turno=pref.getString("turno","");
         String horas=pref.getString("horas","");
         String codigo=pref.getString("codigo","");
-
+        String dni=pref.getString("dni","");
         String edad=pref.getString("edad","");
         String nombres=pref.getString("nombres","");
         String area=pref.getString("area","");
@@ -766,15 +828,26 @@ public class RegistroAccidente12 extends AppCompatActivity {
         String AccImg2=pref.getString("AccImg2","");
         String AccImg3=pref.getString("AccImg3","");
 
+        String responsable1=pref.getString("responsable1"," ");
+        String responsable2=pref.getString("responsable2"," ");
+        String responsable3=pref.getString("responsable3"," ");
+        String responsable4=pref.getString("responsable4"," ");
+        String responsable5=pref.getString("responsable5"," ");
+
+        String fechaCor1=pref.getString("fechaCor1","");
+        String fechaCor2=pref.getString("fechaCor2","");
+        String fechaCor3=pref.getString("fechaCor3","");
+        String fechaCor4=pref.getString("fechaCor4","");
+        String fechaCor5=pref.getString("fechaCor5","");
 
 
 
 
 
         Date date = new Date() ;
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(date);
+        String timeStamp = new SimpleDateFormat("yyyyMMdd").format(date);
         ContextWrapper contextWrapper= new ContextWrapper(getApplicationContext());
-        File file = new File(contextWrapper.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), "pdf.pdf");
+        File file = new File(contextWrapper.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS), codigo+timeStamp+".pdf");
         OutputStream output = new FileOutputStream(file);
         PdfWriter pdfWriter = new PdfWriter(file);
         PdfDocument pdfDoc = new PdfDocument(pdfWriter);
@@ -786,11 +859,18 @@ public class RegistroAccidente12 extends AppCompatActivity {
 
         DeviceRgb colorCeldasGrey= new DeviceRgb(191,191,191);
 
+        FirebaseStorage storage=FirebaseStorage.getInstance();
+        StorageReference imageRef1 = storage.getReference().child("Imagenes").child(AccImg1);
+        StorageReference imageRef2 = storage.getReference().child("Imagenes").child(AccImg2);
+        StorageReference imageRef3 = storage.getReference().child("Imagenes").child(AccImg3);
+
         Drawable d1=getDrawable(R.drawable.logoo);
         Bitmap bitmap=((BitmapDrawable)d1).getBitmap();
         ByteArrayOutputStream stream=new ByteArrayOutputStream();
         bitmap.compress((Bitmap.CompressFormat.JPEG),100,stream);
         byte[] bitmapData= stream.toByteArray();
+
+
 
         ImageData imageData= ImageDataFactory.create(bitmapData);
         Image image=new Image(imageData);
@@ -814,7 +894,7 @@ public class RegistroAccidente12 extends AppCompatActivity {
 
         table2.addCell(new Cell().add(new Paragraph("")).setHeight(28).setBorder(Border.NO_BORDER));
         table2.addCell(new Cell().add(new Paragraph("N° REGISTRO").setFontSize(9).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
-        table2.addCell(new Cell().add(new Paragraph("").setFontSize(9).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table2.addCell(new Cell().add(new Paragraph(codigo).setFontSize(9).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
         float columwidth3[]={80,100,150,90,140};
         Table table3= new Table(columwidth3);
@@ -949,9 +1029,9 @@ public class RegistroAccidente12 extends AppCompatActivity {
         table10.addCell(new Cell().add(new Paragraph("IMAGEN # 2").setFontSize(7).setBold().setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
         table10.addCell(new Cell().add(new Paragraph("IMAGEN # 3").setFontSize(7).setBold().setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
 
-        table10.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(135));
-        table10.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(135));
-        table10.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(135));
+        table10.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(135));
+        table10.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(135));
+        table10.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(135));
 
         float columwidth11[]={140,140,140,140};
         Table table11= new Table(columwidth11);
@@ -984,7 +1064,7 @@ public class RegistroAccidente12 extends AppCompatActivity {
         table12.addCell(new Cell().add(new Paragraph("FACTORES PERSONALES").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey).setHeight(12));
         table12.addCell(new Cell().add(new Paragraph("FACTORES LABORALES").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey).setHeight(12));
 
-        table12.addCell(new Cell().add(new Paragraph(FactPersonales.toString().trim()).setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(80));
+        table12.addCell(new Cell().add(new Paragraph(FactPersonales.toString()).setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(80));
         table12.addCell(new Cell().add(new Paragraph(FactLaborales.toString()).setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(80));
 
 
@@ -997,50 +1077,34 @@ public class RegistroAccidente12 extends AppCompatActivity {
 
         table13.addCell(new Cell(2,1).add(new Paragraph("DESCRIPCIÓN DE LA MEDIDA CORRECTIVA").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey).setHeight(12));
         table13.addCell(new Cell(2,1).add(new Paragraph("RESPONSABLE").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
-        table13.addCell(new Cell(1,3).add(new Paragraph("FECHA DE EJECICIÓN").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
+        table13.addCell(new Cell(2,3).add(new Paragraph("FECHA DE EJECICIÓN").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
         table13.addCell(new Cell(2,1).add(new Paragraph("FECHA DE EJECUCIÓN REALIZADA").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
 
-        //table13.addCell(new Cell().add(new Paragraph("").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
-        // table13.addCell(new Cell().add(new Paragraph("").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
-        table13.addCell(new Cell().add(new Paragraph("DÍA").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
-        table13.addCell(new Cell().add(new Paragraph("MES").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
-        table13.addCell(new Cell().add(new Paragraph("AÑO").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
-        //table13.addCell(new Cell().add(new Paragraph("").setFontSize(8).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
 
-        table13.addCell(new Cell().add(new Paragraph(cleanList.get(0).toString().trim()).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(medida1).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(responsable1).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell(1,3).add(new Paragraph(fechaCor1).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
-        table13.addCell(new Cell().add(new Paragraph(cleanList.get(1).toString().trim()).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(medida2).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(responsable2).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell(1,3).add(new Paragraph(fechaCor2).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
-        table13.addCell(new Cell().add(new Paragraph(cleanList.get(2).toString().trim()).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(medida3).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(responsable3).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell(1,3).add(new Paragraph(fechaCor3).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
-        table13.addCell(new Cell().add(new Paragraph(cleanList.get(3).toString().trim()).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(medida4).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(responsable4).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell(1,3).add(new Paragraph(fechaCor4).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
-        table13.addCell(new Cell().add(new Paragraph(cleanList.get(4).toString().trim()).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table13.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(medida5).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(responsable5).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell(1,3).add(new Paragraph(fechaCor5).setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table13.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
         float columwidth14[]={187,187,186};
         Table table14= new Table(columwidth14);
@@ -1052,34 +1116,34 @@ public class RegistroAccidente12 extends AppCompatActivity {
         table14.addCell(new Cell().add(new Paragraph("IMAGEN # 2").setFontSize(7).setBold().setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
         table14.addCell(new Cell().add(new Paragraph("IMAGEN # 3").setFontSize(7).setBold().setTextAlignment(TextAlignment.CENTER)).setVerticalAlignment(VerticalAlignment.MIDDLE).setBackgroundColor(colorCeldasGrey));
 
-        table14.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(100));
-        table14.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(100));
-        table14.addCell(new Cell().add(new Paragraph("a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(100));
+        table14.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(100));
+        table14.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(100));
+        table14.addCell(new Cell().add(new Paragraph(" ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(100));
 
         float columwidth15[]={110,110,90,250};
         Table table15= new Table(columwidth15);
 
         table15.addCell(new Cell(1,4).add(new Paragraph("RESPONSABLES DEL REGISTRO Y DE LA INVESTIGACIÓN").setFontSize(7).setBold().setTextAlignment(TextAlignment.LEFT)).setBackgroundColor(colorCeldasGrey));
 
-        table15.addCell(new Cell().add(new Paragraph("Nombre: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Cargo: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Fecha: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Firma: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Nombre: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Cargo: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Fecha: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Firma: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
-        table15.addCell(new Cell().add(new Paragraph("Nombre: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Cargo: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Fecha: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Firma: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Nombre: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Cargo: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Fecha: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Firma: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
-        table15.addCell(new Cell().add(new Paragraph("Nombre: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Cargo: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Fecha: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Firma: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Nombre: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Cargo: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Fecha: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Firma: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
-        table15.addCell(new Cell().add(new Paragraph("Nombre: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Cargo: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Fecha: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
-        table15.addCell(new Cell().add(new Paragraph("Firma: "+"a").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Nombre: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Cargo: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Fecha: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
+        table15.addCell(new Cell().add(new Paragraph("Firma: ").setFontSize(7).setTextAlignment(TextAlignment.LEFT).setTextAlignment(TextAlignment.JUSTIFIED)).setHeight(20).setVerticalAlignment(VerticalAlignment.MIDDLE));
 
 
         document.add(table1);

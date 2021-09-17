@@ -100,6 +100,7 @@ public class RegistroAccidente2 extends AppCompatActivity {
                 editor.putString("diasDescanso",txtDiasDescanso.getText().toString());
                 editor.putString("nroTrabajadores",txtTrabajadoresAf.getText().toString());
                 editor.putString("descripcion",txtDescripcion.getText().toString());
+                editor.putString("codigo",nroRegistro.getText().toString());
 
                 if (txtA_Hora.getText().toString().isEmpty() || txtA_Fecha.getText().toString().isEmpty()&&txtI_Hora.getText().toString().isEmpty() || txtI_Fecha.getText().toString().isEmpty() || txtLugar.getText().toString().isEmpty() ||
                         txtDiasDescanso.getText().toString().isEmpty()  || txtTrabajadoresAf.getText().toString().isEmpty() || txtDescripcion.getText().toString().isEmpty()){

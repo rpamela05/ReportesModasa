@@ -31,12 +31,10 @@ public class AdminHomeActivity extends AppCompatActivity {
     FirebaseFirestore fStore;
     EditText email, contraseña, rcontraseña;
 
-    String[] opciones = {"Agregar usuario", "Lista de declaraciones"
-            ,"Registro del accidente","Cerrar sesión"};
+    String[] opciones = {"Agregar usuario","Registro del accidente","Cerrar sesión"};
 
-    int[] imagenes = {R.drawable.ic_outline_person_add_24,
-            R.drawable.ic_baseline_view_headline_24,R.drawable.ic_outline_assignment_24,R.drawable.ic_outline_login_24};
-    int[] colores={R.color.add_user,R.color.lista_declaraciones,R.color.registro_accidente,R.color.log_out};
+    int[] imagenes = {R.drawable.ic_outline_person_add_24,R.drawable.ic_outline_assignment_24,R.drawable.ic_outline_login_24};
+    int[] colores={R.color.add_user,R.color.registro_accidente,R.color.log_out};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +77,7 @@ public class AdminHomeActivity extends AppCompatActivity {
                                                 DocumentReference documentReference= fStore.collection("Users").document(user.getUid());
                                                 Map<String,Object> userInfo=new HashMap<>();
                                                 userInfo.put("Email",email.getText().toString());
-                                                userInfo.put("isUser","1");
+                                                userInfo.put("isAdmin","1");
                                                 documentReference.set(userInfo);
                                                 startActivity(new Intent(getApplicationContext(), AdminHomeActivity.class));
                                                 finish();
@@ -87,7 +85,7 @@ public class AdminHomeActivity extends AppCompatActivity {
                                         }).addOnFailureListener(new OnFailureListener() {
                                             @Override
                                             public void onFailure(@NonNull Exception e) {
-                                                Toast.makeText(AdminHomeActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(AdminHomeActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                                             }
                                         });
                             }else{
@@ -98,11 +96,9 @@ public class AdminHomeActivity extends AppCompatActivity {
                     builder.show();
 
                 }if (position==1){
-                    Toast.makeText(AdminHomeActivity.this, "1", Toast.LENGTH_SHORT).show();
-                }if (position==2){
                     Intent intent=new Intent(AdminHomeActivity.this,RegistroAccidente.class);
                     startActivity(intent);
-                }if (position==3){
+                }if (position==2){
                     FirebaseAuth.getInstance().signOut();
                     startActivity(new Intent(getApplicationContext(),LoginActivity.class));
                     finish();

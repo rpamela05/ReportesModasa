@@ -230,6 +230,7 @@ public class RegistroAccidente6 extends  AppCompatActivity {
             @Override
             public void onClick(View v) {
 //1
+                editor.putString("codigo",nroRegistro.getText().toString());
                 if(LA1.isChecked()==true){
                     editor.putString("LA1",LA1.getText().toString());
                     editor.commit();

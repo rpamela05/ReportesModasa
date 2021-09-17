@@ -214,7 +214,7 @@ public class RegistroAccidente06 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+                editor.putString("codigo",nroRegistro.getText().toString());
                 if (CF1.isChecked() == true) {
                     editor.putString("CF1", CF1.getText().toString());
                     editor.putString("CBS","FACTORES PERSONALES");

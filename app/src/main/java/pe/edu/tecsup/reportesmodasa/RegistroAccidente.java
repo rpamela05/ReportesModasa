@@ -104,9 +104,15 @@ public class RegistroAccidente extends AppCompatActivity {
                 editor.putString("horas",txtHoras_trabajo.getText().toString());
                 editor.putString("codigo",nroRegistro.getText().toString());
                 editor.commit();
-                startActivity(new Intent(getApplicationContext(),RegistroAccidente2.class));
-                finish();
 
+                if (txtTurno.getText().toString().isEmpty() ||
+                        txtHoras_trabajo.getText().toString().isEmpty()||
+                        nroRegistro.getText().toString().isEmpty()) {
+                    Toast.makeText(RegistroAccidente.this, "Rellene los datos", Toast.LENGTH_SHORT).show();
+                }else{
+                    startActivity(new Intent(getApplicationContext(),RegistroAccidente2.class));
+                    finish();
+                }
             }
         });
 

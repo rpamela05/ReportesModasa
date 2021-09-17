@@ -775,6 +775,7 @@ public class RegistroAccidente7 extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),RegistroAccidente10.class));
                 SharedPreferences.Editor editor = pref.edit();
+                editor.putString("codigo",nroRegistro.getText().toString());
                 String responsable1=rp1.getText().toString();
                 String responsable2=rp2.getText().toString();
                 String responsable3=rp3.getText().toString();
@@ -832,6 +833,7 @@ public class RegistroAccidente7 extends AppCompatActivity {
                 cadena.child("FactLaborales").setValue(FactLaborales);
                 cadena.child("NAC").setValue(cleanList);
 
+                startActivity(new Intent(getApplicationContext(), RegistroAccidente12.class));
                 finish();
 
 
