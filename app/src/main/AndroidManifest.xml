@@ -32,7 +32,8 @@
         <activity android:name=".DeclaracionAccidente3" />
         <activity android:name=".DeclaracionAccidente2" />
         <activity android:name=".DeclaracionAccidente" />
-        <activity android:name=".RegistroAccidente12" />
+        <activity android:name=".RegistroAccidente12">
+        </activity>
         <activity android:name=".RegistroAccidente11" />
         <activity android:name=".RegistroAccidente10" />
         <activity android:name=".RegistroAccidente9" />
@@ -48,12 +49,12 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".AdminHomeActivity" />
         <activity android:name=".LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
     </application>
 
 </manifest>

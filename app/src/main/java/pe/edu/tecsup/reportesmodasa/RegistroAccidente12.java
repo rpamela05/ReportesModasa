@@ -69,6 +69,8 @@ public class RegistroAccidente12 extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     createPDF();
+                    startActivity(new Intent(getApplicationContext(),RegistroAccidente10.class));
+                    finish();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
@@ -77,8 +79,10 @@ public class RegistroAccidente12 extends AppCompatActivity {
                 Date date = new Date() ;
                 String timeStamp = new SimpleDateFormat("yyyyMMdd").format(date);
                 String codigo=pref.getString("codigo","");
-                
+
                 displayPDF();
+
+
             }
         });
     }
@@ -106,6 +110,7 @@ public class RegistroAccidente12 extends AppCompatActivity {
         try{
             startActivity(pdfpOpe);
             finish();
+
         }catch (ActivityNotFoundException e) {
             Toast.makeText(RegistroAccidente12.this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
@@ -860,9 +865,6 @@ public class RegistroAccidente12 extends AppCompatActivity {
         DeviceRgb colorCeldasGrey= new DeviceRgb(191,191,191);
 
         FirebaseStorage storage=FirebaseStorage.getInstance();
-        StorageReference imageRef1 = storage.getReference().child("Imagenes").child(AccImg1);
-        StorageReference imageRef2 = storage.getReference().child("Imagenes").child(AccImg2);
-        StorageReference imageRef3 = storage.getReference().child("Imagenes").child(AccImg3);
 
         Drawable d1=getDrawable(R.drawable.logoo);
         Bitmap bitmap=((BitmapDrawable)d1).getBitmap();
